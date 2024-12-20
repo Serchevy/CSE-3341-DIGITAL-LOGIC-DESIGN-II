@@ -1,0 +1,1 @@
+Warning (10268): Verilog HDL information at reverseLogic.sv(11): always construct contains both blocking and non-blocking assignments File: C:/Users/serva/OneDrive/Documents/Classes_Spring_2024/ADL/Lab1/reverseLogic.sv Line: 11

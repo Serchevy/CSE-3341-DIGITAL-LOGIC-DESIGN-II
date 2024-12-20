@@ -1,0 +1,82 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/serva/OneDrive/Documents/Classes_Spring_2024/ADL/LAB3/Lab3/simulation/qsim
+vhard_block
+Z1 !s110 1708116850
+!i10b 1
+!s100 a>L0;YN75fi@5NlMFN]8`3
+Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
+IMekFIe[eTMc8_b@aC0McI2
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+R0
+Z4 w1708116847
+Z5 8Lab3.vo
+Z6 FLab3.vo
+!i122 28
+L0 2031 45
+Z7 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z8 !s108 1708116850.000000
+Z9 !s107 Lab3.vo|
+Z10 !s90 -work|work|Lab3.vo|
+!i113 1
+Z11 o-work work
+Z12 tCvgOpt 0
+vLab3
+R1
+!i10b 1
+!s100 j@hm;iiY=IQ_kobkJOJWJ0
+R2
+I]<6Ye3_oMf@?Gd4QB38422
+R3
+R0
+R4
+R5
+R6
+!i122 28
+L0 32 1998
+R7
+r1
+!s85 0
+31
+R8
+R9
+R10
+!i113 1
+R11
+R12
+n@lab3
+vLab3_vlg_vec_tst
+R1
+!i10b 1
+!s100 =GnNZnZR23nWTXgWzkOY00
+R2
+IoTn8Bc6^l9Bok;`H1m24_1
+R3
+R0
+w1708116846
+8Waveform.vwf.vt
+FWaveform.vwf.vt
+!i122 29
+L0 30 371
+R7
+r1
+!s85 0
+31
+R8
+!s107 Waveform.vwf.vt|
+!s90 -work|work|Waveform.vwf.vt|
+!i113 1
+R11
+R12
+n@lab3_vlg_vec_tst

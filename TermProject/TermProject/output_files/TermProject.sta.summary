@@ -1,0 +1,317 @@
+------------------------------------------------------------
+Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'CLK'
+Slack : -6.997
+TNS   : -347.862
+
+Type  : Slow 1200mV 85C Model Setup 'CU:control_Unit|state[0]'
+Slack : -6.243
+TNS   : -140.012
+
+Type  : Slow 1200mV 85C Model Setup 'ROW[0]'
+Slack : -2.928
+TNS   : -40.465
+
+Type  : Slow 1200mV 85C Model Setup 'AU:Arithmetic_Unit|Divider:DIVIDE|D_Control:DivCtrl|State.Ends'
+Slack : -2.891
+TNS   : -26.289
+
+Type  : Slow 1200mV 85C Model Setup 'CU:control_Unit|clk_ladder:slowerCLK|ladder[15]'
+Slack : -2.566
+TNS   : -6.244
+
+Type  : Slow 1200mV 85C Model Setup 'keypad_input:Input_Unit|keypad_base:keypad_base|clock_div:keypad_clock_divider|clk_track'
+Slack : -2.078
+TNS   : -13.590
+
+Type  : Slow 1200mV 85C Model Setup 'AU:Arithmetic_Unit|Multiplier:Mult|MultControl:Ctrl|state[4]'
+Slack : -0.565
+TNS   : -6.645
+
+Type  : Slow 1200mV 85C Model Setup 'Controller:Output_Unit|clk_ladder:clock|ladder[17]'
+Slack : 0.131
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'ROW[0]'
+Slack : 0.289
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'CLK'
+Slack : 0.326
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'Controller:Output_Unit|clk_ladder:clock|ladder[17]'
+Slack : 0.344
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'CU:control_Unit|clk_ladder:slowerCLK|ladder[15]'
+Slack : 0.378
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'keypad_input:Input_Unit|keypad_base:keypad_base|clock_div:keypad_clock_divider|clk_track'
+Slack : 0.378
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'AU:Arithmetic_Unit|Multiplier:Mult|MultControl:Ctrl|state[4]'
+Slack : 0.612
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'AU:Arithmetic_Unit|Divider:DIVIDE|D_Control:DivCtrl|State.Ends'
+Slack : 0.657
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'CU:control_Unit|state[0]'
+Slack : 4.283
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Recovery 'CLK'
+Slack : -2.707
+TNS   : -13.535
+
+Type  : Slow 1200mV 85C Model Removal 'CLK'
+Slack : 2.533
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'CLK'
+Slack : -3.000
+TNS   : -186.793
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'ROW[0]'
+Slack : -3.000
+TNS   : -70.412
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'CU:control_Unit|state[0]'
+Slack : -1.403
+TNS   : -33.672
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'AU:Arithmetic_Unit|Divider:DIVIDE|D_Control:DivCtrl|State.Ends'
+Slack : -1.403
+TNS   : -22.448
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'AU:Arithmetic_Unit|Multiplier:Mult|MultControl:Ctrl|state[4]'
+Slack : -1.403
+TNS   : -22.448
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'keypad_input:Input_Unit|keypad_base:keypad_base|clock_div:keypad_clock_divider|clk_track'
+Slack : -1.403
+TNS   : -11.224
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'CU:control_Unit|clk_ladder:slowerCLK|ladder[15]'
+Slack : -1.403
+TNS   : -5.612
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'Controller:Output_Unit|clk_ladder:clock|ladder[17]'
+Slack : -1.403
+TNS   : -2.806
+
+Type  : Slow 1200mV 0C Model Setup 'CLK'
+Slack : -6.323
+TNS   : -309.049
+
+Type  : Slow 1200mV 0C Model Setup 'CU:control_Unit|state[0]'
+Slack : -5.739
+TNS   : -128.204
+
+Type  : Slow 1200mV 0C Model Setup 'ROW[0]'
+Slack : -2.704
+TNS   : -35.997
+
+Type  : Slow 1200mV 0C Model Setup 'AU:Arithmetic_Unit|Divider:DIVIDE|D_Control:DivCtrl|State.Ends'
+Slack : -2.529
+TNS   : -22.679
+
+Type  : Slow 1200mV 0C Model Setup 'CU:control_Unit|clk_ladder:slowerCLK|ladder[15]'
+Slack : -2.299
+TNS   : -5.459
+
+Type  : Slow 1200mV 0C Model Setup 'keypad_input:Input_Unit|keypad_base:keypad_base|clock_div:keypad_clock_divider|clk_track'
+Slack : -1.859
+TNS   : -11.971
+
+Type  : Slow 1200mV 0C Model Setup 'AU:Arithmetic_Unit|Multiplier:Mult|MultControl:Ctrl|state[4]'
+Slack : -0.448
+TNS   : -5.213
+
+Type  : Slow 1200mV 0C Model Setup 'Controller:Output_Unit|clk_ladder:clock|ladder[17]'
+Slack : 0.203
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'ROW[0]'
+Slack : 0.100
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'CLK'
+Slack : 0.292
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'Controller:Output_Unit|clk_ladder:clock|ladder[17]'
+Slack : 0.308
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'CU:control_Unit|clk_ladder:slowerCLK|ladder[15]'
+Slack : 0.338
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'keypad_input:Input_Unit|keypad_base:keypad_base|clock_div:keypad_clock_divider|clk_track'
+Slack : 0.339
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'AU:Arithmetic_Unit|Divider:DIVIDE|D_Control:DivCtrl|State.Ends'
+Slack : 0.591
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'AU:Arithmetic_Unit|Multiplier:Mult|MultControl:Ctrl|state[4]'
+Slack : 0.593
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'CU:control_Unit|state[0]'
+Slack : 4.038
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Recovery 'CLK'
+Slack : -2.472
+TNS   : -12.360
+
+Type  : Slow 1200mV 0C Model Removal 'CLK'
+Slack : 2.247
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'CLK'
+Slack : -3.000
+TNS   : -186.793
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'ROW[0]'
+Slack : -3.000
+TNS   : -65.959
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'CU:control_Unit|state[0]'
+Slack : -1.403
+TNS   : -33.672
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'AU:Arithmetic_Unit|Divider:DIVIDE|D_Control:DivCtrl|State.Ends'
+Slack : -1.403
+TNS   : -22.448
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'AU:Arithmetic_Unit|Multiplier:Mult|MultControl:Ctrl|state[4]'
+Slack : -1.403
+TNS   : -22.448
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'keypad_input:Input_Unit|keypad_base:keypad_base|clock_div:keypad_clock_divider|clk_track'
+Slack : -1.403
+TNS   : -11.224
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'CU:control_Unit|clk_ladder:slowerCLK|ladder[15]'
+Slack : -1.403
+TNS   : -5.612
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'Controller:Output_Unit|clk_ladder:clock|ladder[17]'
+Slack : -1.403
+TNS   : -2.806
+
+Type  : Fast 1200mV 0C Model Setup 'CU:control_Unit|state[0]'
+Slack : -2.723
+TNS   : -60.529
+
+Type  : Fast 1200mV 0C Model Setup 'CLK'
+Slack : -2.294
+TNS   : -76.760
+
+Type  : Fast 1200mV 0C Model Setup 'ROW[0]'
+Slack : -1.331
+TNS   : -19.224
+
+Type  : Fast 1200mV 0C Model Setup 'keypad_input:Input_Unit|keypad_base:keypad_base|clock_div:keypad_clock_divider|clk_track'
+Slack : -0.922
+TNS   : -3.663
+
+Type  : Fast 1200mV 0C Model Setup 'AU:Arithmetic_Unit|Divider:DIVIDE|D_Control:DivCtrl|State.Ends'
+Slack : -0.658
+TNS   : -4.443
+
+Type  : Fast 1200mV 0C Model Setup 'CU:control_Unit|clk_ladder:slowerCLK|ladder[15]'
+Slack : -0.565
+TNS   : -1.187
+
+Type  : Fast 1200mV 0C Model Setup 'AU:Arithmetic_Unit|Multiplier:Mult|MultControl:Ctrl|state[4]'
+Slack : -0.279
+TNS   : -2.976
+
+Type  : Fast 1200mV 0C Model Setup 'Controller:Output_Unit|clk_ladder:clock|ladder[17]'
+Slack : 0.627
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'ROW[0]'
+Slack : 0.103
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'CLK'
+Slack : 0.141
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'Controller:Output_Unit|clk_ladder:clock|ladder[17]'
+Slack : 0.149
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'CU:control_Unit|clk_ladder:slowerCLK|ladder[15]'
+Slack : 0.165
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'keypad_input:Input_Unit|keypad_base:keypad_base|clock_div:keypad_clock_divider|clk_track'
+Slack : 0.166
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'AU:Arithmetic_Unit|Divider:DIVIDE|D_Control:DivCtrl|State.Ends'
+Slack : 0.246
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'AU:Arithmetic_Unit|Multiplier:Mult|MultControl:Ctrl|state[4]'
+Slack : 0.764
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'CU:control_Unit|state[0]'
+Slack : 1.682
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Recovery 'CLK'
+Slack : -0.618
+TNS   : -3.090
+
+Type  : Fast 1200mV 0C Model Removal 'CLK'
+Slack : 0.812
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'CLK'
+Slack : -3.000
+TNS   : -139.465
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'ROW[0]'
+Slack : -3.000
+TNS   : -52.493
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'CU:control_Unit|state[0]'
+Slack : -1.000
+TNS   : -24.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'AU:Arithmetic_Unit|Divider:DIVIDE|D_Control:DivCtrl|State.Ends'
+Slack : -1.000
+TNS   : -16.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'AU:Arithmetic_Unit|Multiplier:Mult|MultControl:Ctrl|state[4]'
+Slack : -1.000
+TNS   : -16.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'keypad_input:Input_Unit|keypad_base:keypad_base|clock_div:keypad_clock_divider|clk_track'
+Slack : -1.000
+TNS   : -8.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'CU:control_Unit|clk_ladder:slowerCLK|ladder[15]'
+Slack : -1.000
+TNS   : -4.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'Controller:Output_Unit|clk_ladder:clock|ladder[17]'
+Slack : -1.000
+TNS   : -2.000
+
+------------------------------------------------------------

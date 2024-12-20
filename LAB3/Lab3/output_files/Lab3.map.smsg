@@ -1,0 +1,2 @@
+Info (10281): Verilog HDL Declaration information at Lab3.sv(15): object "clk190" differs only in case from object "CLK190" in the same scope File: C:/Users/serva/OneDrive/Documents/Classes_Spring_2024/ADL/LAB3/Lab3/Lab3.sv Line: 15
+Info (10281): Verilog HDL Declaration information at Controller.sv(7): object "HEX" differs only in case from object "Hex" in the same scope File: C:/Users/serva/OneDrive/Documents/Classes_Spring_2024/ADL/LAB3/Lab3/Controller.sv Line: 7

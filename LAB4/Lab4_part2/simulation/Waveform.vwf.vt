@@ -1,0 +1,272 @@
+// Copyright (C) 2020  Intel Corporation. All rights reserved.
+// Your use of Intel Corporation's design tools, logic functions 
+// and other software and tools, and any partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Intel Program License 
+// Subscription Agreement, the Intel Quartus Prime License Agreement,
+// the Intel FPGA IP License Agreement, or other applicable license
+// agreement, including, without limitation, that your use is for
+// the sole purpose of programming logic devices manufactured by
+// Intel and sold by Intel or its authorized distributors.  Please
+// refer to the applicable agreement for further details, at
+// https://fpgasoftware.intel.com/eula.
+
+// *****************************************************************************
+// This file contains a Verilog test bench with test vectors .The test vectors  
+// are exported from a vector file in the Quartus Waveform Editor and apply to  
+// the top level entity of the current Quartus project .The user can use this   
+// testbench to simulate his design using a third-party simulation tool .       
+// *****************************************************************************
+// Generated on "03/18/2024 17:47:01"
+                                                                                
+// Verilog Test Bench (with test vectors) for design :                          Lab4_part2
+// 
+// Simulation tool : 3rd Party
+// 
+
+`timescale 1 ps/ 1 ps
+module Lab4_part2_vlg_vec_tst();
+// constants                                           
+// general purpose registers
+reg CLEAR;
+reg CLK;
+reg IN;
+reg [7:0] Min;
+reg Out;
+reg [7:0] Qin;
+reg inM;
+reg inQ;
+// wires                                               
+wire [3:0] CAT;
+wire H;
+wire [0:6] HEX;
+wire [0:13] Mout;
+wire [15:0] Pout;
+wire [0:13] Qout;
+
+// assign statements (if any)                          
+Lab4_part2 i1 (
+// port map - connection between master ports and signals/registers   
+	.CAT(CAT),
+	.CLEAR(CLEAR),
+	.CLK(CLK),
+	.H(H),
+	.HEX(HEX),
+	.IN(IN),
+	.Min(Min),
+	.Mout(Mout),
+	.Out(Out),
+	.Pout(Pout),
+	.Qin(Qin),
+	.Qout(Qout),
+	.inM(inM),
+	.inQ(inQ)
+);
+initial 
+begin 
+#1000000 $stop;
+end 
+
+// CLEAR
+initial
+begin
+	CLEAR = 1'b1;
+	CLEAR = #2500 1'b0;
+	CLEAR = #2500 1'b1;
+	CLEAR = #77500 1'b0;
+	CLEAR = #2500 1'b1;
+	CLEAR = #77500 1'b0;
+	CLEAR = #2500 1'b1;
+	CLEAR = #77500 1'b0;
+	CLEAR = #2500 1'b1;
+	CLEAR = #77500 1'b0;
+	CLEAR = #2500 1'b1;
+	CLEAR = #77500 1'b0;
+	CLEAR = #2500 1'b1;
+	CLEAR = #77500 1'b0;
+	CLEAR = #2500 1'b1;
+end 
+
+// CLK
+always
+begin
+	CLK = 1'b0;
+	CLK = #1000 1'b1;
+	#1000;
+end 
+
+// IN
+initial
+begin
+	IN = 1'b1;
+	IN = #5000 1'b0;
+	IN = #5000 1'b1;
+	IN = #75000 1'b0;
+	IN = #5000 1'b1;
+	IN = #75000 1'b0;
+	IN = #5000 1'b1;
+	IN = #75000 1'b0;
+	IN = #5000 1'b1;
+	IN = #75000 1'b0;
+	IN = #5000 1'b1;
+	IN = #75000 1'b0;
+	IN = #5000 1'b1;
+	IN = #75000 1'b0;
+	IN = #5000 1'b1;
+end 
+
+// Out
+initial
+begin
+	Out = 1'b1;
+	Out = #10000 1'b0;
+	Out = #5000 1'b1;
+	Out = #75000 1'b0;
+	Out = #5000 1'b1;
+	Out = #75000 1'b0;
+	Out = #5000 1'b1;
+	Out = #75000 1'b0;
+	Out = #5000 1'b1;
+	Out = #75000 1'b0;
+	Out = #5000 1'b1;
+	Out = #75000 1'b0;
+	Out = #5000 1'b1;
+	Out = #75000 1'b0;
+	Out = #5000 1'b1;
+end 
+// Min[ 7 ]
+initial
+begin
+	Min[7] = 1'b0;
+	Min[7] = #240000 1'b1;
+	Min[7] = #240000 1'b0;
+end 
+// Min[ 6 ]
+initial
+begin
+	Min[6] = 1'b1;
+	Min[6] = #80000 1'b0;
+	Min[6] = #80000 1'b1;
+	Min[6] = #80000 1'b0;
+	Min[6] = #160000 1'b1;
+	Min[6] = #80000 1'b0;
+end 
+// Min[ 5 ]
+initial
+begin
+	Min[5] = 1'b1;
+	Min[5] = #80000 1'b0;
+	Min[5] = #80000 1'b1;
+	Min[5] = #240000 1'b0;
+end 
+// Min[ 4 ]
+initial
+begin
+	Min[4] = 1'b1;
+	Min[4] = #240000 1'b0;
+	Min[4] = #160000 1'b1;
+	Min[4] = #80000 1'b0;
+end 
+// Min[ 3 ]
+initial
+begin
+	Min[3] = 1'b1;
+	Min[3] = #80000 1'b0;
+	Min[3] = #80000 1'b1;
+	Min[3] = #320000 1'b0;
+end 
+// Min[ 2 ]
+initial
+begin
+	Min[2] = 1'b1;
+	Min[2] = #240000 1'b0;
+	Min[2] = #160000 1'b1;
+	Min[2] = #80000 1'b0;
+end 
+// Min[ 1 ]
+initial
+begin
+	Min[1] = 1'b1;
+	Min[1] = #80000 1'b0;
+	Min[1] = #80000 1'b1;
+	Min[1] = #240000 1'b0;
+end 
+// Min[ 0 ]
+initial
+begin
+	Min[0] = 1'b1;
+	Min[0] = #240000 1'b0;
+	Min[0] = #160000 1'b1;
+	Min[0] = #80000 1'b0;
+end 
+// Qin[ 7 ]
+initial
+begin
+	Qin[7] = 1'b0;
+	Qin[7] = #160000 1'b1;
+	Qin[7] = #80000 1'b0;
+	Qin[7] = #80000 1'b1;
+	Qin[7] = #160000 1'b0;
+end 
+// Qin[ 6 ]
+initial
+begin
+	Qin[6] = 1'b0;
+	Qin[6] = #160000 1'b1;
+	Qin[6] = #80000 1'b0;
+	Qin[6] = #80000 1'b1;
+	Qin[6] = #160000 1'b0;
+end 
+// Qin[ 5 ]
+initial
+begin
+	Qin[5] = 1'b0;
+	Qin[5] = #80000 1'b1;
+	Qin[5] = #320000 1'b0;
+end 
+// Qin[ 4 ]
+initial
+begin
+	Qin[4] = 1'b0;
+	Qin[4] = #160000 1'b1;
+	Qin[4] = #240000 1'b0;
+end 
+// Qin[ 3 ]
+initial
+begin
+	Qin[3] = 1'b0;
+	Qin[3] = #80000 1'b1;
+	Qin[3] = #160000 1'b0;
+	Qin[3] = #80000 1'b1;
+	Qin[3] = #160000 1'b0;
+end 
+// Qin[ 2 ]
+initial
+begin
+	Qin[2] = 1'b0;
+	Qin[2] = #160000 1'b1;
+	Qin[2] = #80000 1'b0;
+	Qin[2] = #80000 1'b1;
+	Qin[2] = #160000 1'b0;
+end 
+// Qin[ 1 ]
+initial
+begin
+	Qin[1] = 1'b0;
+	Qin[1] = #80000 1'b1;
+	Qin[1] = #320000 1'b0;
+end 
+// Qin[ 0 ]
+initial
+begin
+	Qin[0] = 1'b1;
+	Qin[0] = #80000 1'b0;
+	Qin[0] = #80000 1'b1;
+	Qin[0] = #160000 1'b0;
+	Qin[0] = #80000 1'b1;
+	Qin[0] = #80000 1'b0;
+end 
+endmodule
+

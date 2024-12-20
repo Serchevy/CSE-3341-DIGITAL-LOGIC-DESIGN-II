@@ -1,0 +1,7 @@
+module 
+(
+	input CLK, ON_OFF, CLEAR,
+);
+
+
+endmodule

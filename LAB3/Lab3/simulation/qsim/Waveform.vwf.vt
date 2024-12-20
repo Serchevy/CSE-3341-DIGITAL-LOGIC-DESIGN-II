@@ -1,0 +1,401 @@
+// Copyright (C) 2020  Intel Corporation. All rights reserved.
+// Your use of Intel Corporation's design tools, logic functions 
+// and other software and tools, and any partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Intel Program License 
+// Subscription Agreement, the Intel Quartus Prime License Agreement,
+// the Intel FPGA IP License Agreement, or other applicable license
+// agreement, including, without limitation, that your use is for
+// the sole purpose of programming logic devices manufactured by
+// Intel and sold by Intel or its authorized distributors.  Please
+// refer to the applicable agreement for further details, at
+// https://fpgasoftware.intel.com/eula.
+
+// *****************************************************************************
+// This file contains a Verilog test bench with test vectors .The test vectors  
+// are exported from a vector file in the Quartus Waveform Editor and apply to  
+// the top level entity of the current Quartus project .The user can use this   
+// testbench to simulate his design using a third-party simulation tool .       
+// *****************************************************************************
+// Generated on "02/16/2024 14:54:05"
+                                                                                
+// Verilog Test Bench (with test vectors) for design :                          Lab3
+// 
+// Simulation tool : 3rd Party
+// 
+
+`timescale 1 ps/ 1 ps
+module Lab3_vlg_vec_tst();
+// constants                                           
+// general purpose registers
+reg Add_Sub;
+reg CLEAR;
+reg CLK;
+reg IN;
+reg Out;
+reg [7:0] X;
+reg [7:0] Y;
+// wires                                               
+wire [3:0] CAT;
+wire [3:0] CCout;
+wire [0:6] HEX;
+wire [7:0] Rout;
+
+// assign statements (if any)                          
+Lab3 i1 (
+// port map - connection between master ports and signals/registers   
+	.Add_Sub(Add_Sub),
+	.CAT(CAT),
+	.CCout(CCout),
+	.CLEAR(CLEAR),
+	.CLK(CLK),
+	.HEX(HEX),
+	.IN(IN),
+	.Out(Out),
+	.Rout(Rout),
+	.X(X),
+	.Y(Y)
+);
+initial 
+begin 
+#800000 $finish;
+end 
+
+// CLEAR
+initial
+begin
+	CLEAR = 1'b1;
+	CLEAR = #40000 1'b0;
+	CLEAR = #10000 1'b1;
+	CLEAR = #40000 1'b0;
+	CLEAR = #10000 1'b1;
+	CLEAR = #40000 1'b0;
+	CLEAR = #10000 1'b1;
+	CLEAR = #40000 1'b0;
+	CLEAR = #10000 1'b1;
+	CLEAR = #40000 1'b0;
+	CLEAR = #10000 1'b1;
+	CLEAR = #40000 1'b0;
+	CLEAR = #10000 1'b1;
+	CLEAR = #40000 1'b0;
+	CLEAR = #10000 1'b1;
+	CLEAR = #40000 1'b0;
+end 
+
+// Add_Sub
+initial
+begin
+	Add_Sub = 1'b0;
+	Add_Sub = #20000 1'b1;
+	Add_Sub = #20000 1'b0;
+	Add_Sub = #30000 1'b1;
+	Add_Sub = #20000 1'b0;
+	Add_Sub = #30000 1'b1;
+	Add_Sub = #20000 1'b0;
+	Add_Sub = #30000 1'b1;
+	Add_Sub = #20000 1'b0;
+	Add_Sub = #30000 1'b1;
+	Add_Sub = #20000 1'b0;
+	Add_Sub = #30000 1'b1;
+	Add_Sub = #20000 1'b0;
+	Add_Sub = #30000 1'b1;
+	Add_Sub = #20000 1'b0;
+	Add_Sub = #30000 1'b1;
+	Add_Sub = #20000 1'b0;
+end 
+
+// IN
+initial
+begin
+	IN = 1'b0;
+	IN = #5000 1'b1;
+	IN = #5000 1'b0;
+	IN = #45000 1'b1;
+	IN = #5000 1'b0;
+	IN = #45000 1'b1;
+	IN = #5000 1'b0;
+	IN = #45000 1'b1;
+	IN = #5000 1'b0;
+	IN = #45000 1'b1;
+	IN = #5000 1'b0;
+	IN = #45000 1'b1;
+	IN = #5000 1'b0;
+	IN = #45000 1'b1;
+	IN = #5000 1'b0;
+	IN = #45000 1'b1;
+	IN = #5000 1'b0;
+end 
+
+// Out
+initial
+begin
+	Out = 1'b0;
+	Out = #10000 1'b1;
+	Out = #5000 1'b0;
+	Out = #10000 1'b1;
+	Out = #5000 1'b0;
+	Out = #30000 1'b1;
+	Out = #5000 1'b0;
+	Out = #10000 1'b1;
+	Out = #5000 1'b0;
+	Out = #30000 1'b1;
+	Out = #5000 1'b0;
+	Out = #10000 1'b1;
+	Out = #5000 1'b0;
+	Out = #30000 1'b1;
+	Out = #5000 1'b0;
+	Out = #10000 1'b1;
+	Out = #5000 1'b0;
+	Out = #30000 1'b1;
+	Out = #5000 1'b0;
+	Out = #10000 1'b1;
+	Out = #5000 1'b0;
+	Out = #30000 1'b1;
+	Out = #5000 1'b0;
+	Out = #10000 1'b1;
+	Out = #5000 1'b0;
+	Out = #30000 1'b1;
+	Out = #5000 1'b0;
+	Out = #10000 1'b1;
+	Out = #5000 1'b0;
+	Out = #30000 1'b1;
+	Out = #5000 1'b0;
+	Out = #10000 1'b1;
+	Out = #5000 1'b0;
+end 
+// X[ 7 ]
+initial
+begin
+	X[7] = 1'b0;
+	X[7] = #200000 1'b1;
+	X[7] = #40000 1'b0;
+	X[7] = #10000 1'b1;
+	X[7] = #40000 1'b0;
+	X[7] = #10000 1'b1;
+	X[7] = #40000 1'b0;
+	X[7] = #10000 1'b1;
+	X[7] = #40000 1'b0;
+end 
+// X[ 6 ]
+initial
+begin
+	X[6] = 1'b1;
+	X[6] = #40000 1'b0;
+	X[6] = #10000 1'b1;
+	X[6] = #40000 1'b0;
+	X[6] = #10000 1'b1;
+	X[6] = #40000 1'b0;
+	X[6] = #10000 1'b1;
+	X[6] = #40000 1'b0;
+	X[6] = #160000 1'b1;
+	X[6] = #40000 1'b0;
+end 
+// X[ 5 ]
+initial
+begin
+	X[5] = 1'b0;
+	X[5] = #50000 1'b1;
+	X[5] = #40000 1'b0;
+	X[5] = #10000 1'b1;
+	X[5] = #40000 1'b0;
+	X[5] = #10000 1'b1;
+	X[5] = #40000 1'b0;
+	X[5] = #10000 1'b1;
+	X[5] = #40000 1'b0;
+	X[5] = #60000 1'b1;
+	X[5] = #40000 1'b0;
+end 
+// X[ 4 ]
+initial
+begin
+	X[4] = 1'b1;
+	X[4] = #40000 1'b0;
+	X[4] = #10000 1'b1;
+	X[4] = #40000 1'b0;
+	X[4] = #10000 1'b1;
+	X[4] = #40000 1'b0;
+	X[4] = #110000 1'b1;
+	X[4] = #40000 1'b0;
+	X[4] = #60000 1'b1;
+	X[4] = #40000 1'b0;
+end 
+// X[ 3 ]
+initial
+begin
+	X[3] = 1'b0;
+	X[3] = #50000 1'b1;
+	X[3] = #40000 1'b0;
+	X[3] = #10000 1'b1;
+	X[3] = #40000 1'b0;
+	X[3] = #60000 1'b1;
+	X[3] = #40000 1'b0;
+	X[3] = #10000 1'b1;
+	X[3] = #40000 1'b0;
+	X[3] = #10000 1'b1;
+	X[3] = #40000 1'b0;
+	X[3] = #10000 1'b1;
+	X[3] = #40000 1'b0;
+end 
+// X[ 2 ]
+initial
+begin
+	X[2] = 1'b1;
+	X[2] = #40000 1'b0;
+	X[2] = #10000 1'b1;
+	X[2] = #40000 1'b0;
+	X[2] = #10000 1'b1;
+	X[2] = #40000 1'b0;
+	X[2] = #10000 1'b1;
+	X[2] = #40000 1'b0;
+	X[2] = #160000 1'b1;
+	X[2] = #40000 1'b0;
+end 
+// X[ 1 ]
+initial
+begin
+	X[1] = 1'b0;
+	X[1] = #50000 1'b1;
+	X[1] = #40000 1'b0;
+	X[1] = #10000 1'b1;
+	X[1] = #40000 1'b0;
+	X[1] = #10000 1'b1;
+	X[1] = #40000 1'b0;
+	X[1] = #10000 1'b1;
+	X[1] = #40000 1'b0;
+	X[1] = #60000 1'b1;
+	X[1] = #40000 1'b0;
+end 
+// X[ 0 ]
+initial
+begin
+	X[0] = 1'b1;
+	X[0] = #40000 1'b0;
+	X[0] = #10000 1'b1;
+	X[0] = #40000 1'b0;
+	X[0] = #10000 1'b1;
+	X[0] = #40000 1'b0;
+	X[0] = #110000 1'b1;
+	X[0] = #40000 1'b0;
+	X[0] = #60000 1'b1;
+	X[0] = #40000 1'b0;
+end 
+// Y[ 7 ]
+initial
+begin
+	Y[7] = 1'b1;
+	Y[7] = #40000 1'b0;
+	Y[7] = #60000 1'b1;
+	Y[7] = #40000 1'b0;
+	Y[7] = #10000 1'b1;
+	Y[7] = #40000 1'b0;
+	Y[7] = #60000 1'b1;
+	Y[7] = #40000 1'b0;
+	Y[7] = #10000 1'b1;
+	Y[7] = #40000 1'b0;
+	Y[7] = #10000 1'b1;
+	Y[7] = #40000 1'b0;
+end 
+// Y[ 6 ]
+initial
+begin
+	Y[6] = 1'b0;
+	Y[6] = #100000 1'b1;
+	Y[6] = #40000 1'b0;
+	Y[6] = #10000 1'b1;
+	Y[6] = #40000 1'b0;
+	Y[6] = #60000 1'b1;
+	Y[6] = #40000 1'b0;
+	Y[6] = #10000 1'b1;
+	Y[6] = #40000 1'b0;
+	Y[6] = #10000 1'b1;
+	Y[6] = #40000 1'b0;
+end 
+// Y[ 5 ]
+initial
+begin
+	Y[5] = 1'b1;
+	Y[5] = #40000 1'b0;
+	Y[5] = #60000 1'b1;
+	Y[5] = #40000 1'b0;
+	Y[5] = #60000 1'b1;
+	Y[5] = #40000 1'b0;
+	Y[5] = #10000 1'b1;
+	Y[5] = #40000 1'b0;
+	Y[5] = #10000 1'b1;
+	Y[5] = #40000 1'b0;
+end 
+// Y[ 4 ]
+initial
+begin
+	Y[4] = 1'b0;
+	Y[4] = #100000 1'b1;
+	Y[4] = #40000 1'b0;
+	Y[4] = #10000 1'b1;
+	Y[4] = #40000 1'b0;
+	Y[4] = #10000 1'b1;
+	Y[4] = #40000 1'b0;
+	Y[4] = #60000 1'b1;
+	Y[4] = #40000 1'b0;
+end 
+// Y[ 3 ]
+initial
+begin
+	Y[3] = 1'b1;
+	Y[3] = #40000 1'b0;
+	Y[3] = #60000 1'b1;
+	Y[3] = #40000 1'b0;
+	Y[3] = #10000 1'b1;
+	Y[3] = #40000 1'b0;
+	Y[3] = #60000 1'b1;
+	Y[3] = #40000 1'b0;
+	Y[3] = #10000 1'b1;
+	Y[3] = #40000 1'b0;
+	Y[3] = #10000 1'b1;
+	Y[3] = #40000 1'b0;
+end 
+// Y[ 2 ]
+initial
+begin
+	Y[2] = 1'b0;
+	Y[2] = #100000 1'b1;
+	Y[2] = #40000 1'b0;
+	Y[2] = #10000 1'b1;
+	Y[2] = #40000 1'b0;
+	Y[2] = #60000 1'b1;
+	Y[2] = #40000 1'b0;
+	Y[2] = #10000 1'b1;
+	Y[2] = #40000 1'b0;
+	Y[2] = #10000 1'b1;
+	Y[2] = #40000 1'b0;
+end 
+// Y[ 1 ]
+initial
+begin
+	Y[1] = 1'b1;
+	Y[1] = #40000 1'b0;
+	Y[1] = #60000 1'b1;
+	Y[1] = #40000 1'b0;
+	Y[1] = #60000 1'b1;
+	Y[1] = #40000 1'b0;
+	Y[1] = #10000 1'b1;
+	Y[1] = #40000 1'b0;
+	Y[1] = #10000 1'b1;
+	Y[1] = #40000 1'b0;
+end 
+// Y[ 0 ]
+initial
+begin
+	Y[0] = 1'b0;
+	Y[0] = #50000 1'b1;
+	Y[0] = #40000 1'b0;
+	Y[0] = #10000 1'b1;
+	Y[0] = #40000 1'b0;
+	Y[0] = #10000 1'b1;
+	Y[0] = #40000 1'b0;
+	Y[0] = #10000 1'b1;
+	Y[0] = #40000 1'b0;
+end 
+endmodule
+

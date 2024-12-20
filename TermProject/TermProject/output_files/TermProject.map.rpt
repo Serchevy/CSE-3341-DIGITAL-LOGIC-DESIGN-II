@@ -1,0 +1,914 @@
+Analysis & Synthesis report for TermProject
+Sat Apr 27 16:01:14 2024
+Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. State Machine - |TermProject|AU:Arithmetic_Unit|Divider:DIVIDE|D_Control:DivCtrl|State
+  9. Registers Removed During Synthesis
+ 10. General Register Statistics
+ 11. Inverted Register Statistics
+ 12. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 13. Parameter Settings for User Entity Instance: CU:control_Unit
+ 14. Parameter Settings for User Entity Instance: CU:control_Unit|clk_ladder:slowerCLK
+ 15. Parameter Settings for User Entity Instance: keypad_input:Input_Unit
+ 16. Parameter Settings for User Entity Instance: keypad_input:Input_Unit|keypad_base:keypad_base|clock_div:keypad_clock_divider
+ 17. Parameter Settings for User Entity Instance: keypad_input:Input_Unit|keypad_base:keypad_base|keypad_decoder:keypad_key_decoder
+ 18. Parameter Settings for User Entity Instance: keypad_input:Input_Unit|shift_reg:shift_reg
+ 19. Parameter Settings for User Entity Instance: AU:Arithmetic_Unit|NBitRegister:InputA
+ 20. Parameter Settings for User Entity Instance: AU:Arithmetic_Unit|NBitRegister:InputB
+ 21. Parameter Settings for User Entity Instance: AU:Arithmetic_Unit|Multiplier:Mult|MultControl:Ctrl
+ 22. Parameter Settings for User Entity Instance: AU:Arithmetic_Unit|NBitRegister:regR
+ 23. Parameter Settings for User Entity Instance: AU:Arithmetic_Unit|Divider:DIVIDE|MUX:Mux1
+ 24. Parameter Settings for User Entity Instance: AU:Arithmetic_Unit|Divider:DIVIDE|shiftreg:Rreg
+ 25. Parameter Settings for User Entity Instance: AU:Arithmetic_Unit|Divider:DIVIDE|shiftreg:Qreg
+ 26. Parameter Settings for User Entity Instance: AU:Arithmetic_Unit|Divider:DIVIDE|shiftreg:Dreg
+ 27. Parameter Settings for User Entity Instance: AU:Arithmetic_Unit|Divider:DIVIDE|alu:AdSb
+ 28. Parameter Settings for User Entity Instance: AU:Arithmetic_Unit|Divider:DIVIDE|D_Control:DivCtrl
+ 29. Parameter Settings for User Entity Instance: AU:Arithmetic_Unit|NBitRegister:QUOTIENT
+ 30. Parameter Settings for User Entity Instance: AU:Arithmetic_Unit|NBitRegister:REMAINDER
+ 31. Parameter Settings for User Entity Instance: Controller:Output_Unit|clk_ladder:clock
+ 32. Port Connectivity Checks: "Controller:Output_Unit|binary2seven:Hex"
+ 33. Port Connectivity Checks: "Controller:Output_Unit|clk_ladder:clock"
+ 34. Port Connectivity Checks: "Controller:Output_Unit"
+ 35. Port Connectivity Checks: "AU:Arithmetic_Unit|Divider:DIVIDE|shiftreg:Dreg"
+ 36. Port Connectivity Checks: "AU:Arithmetic_Unit|Divider:DIVIDE|MUX:Mux1"
+ 37. Port Connectivity Checks: "AU:Arithmetic_Unit|GCLA_AddSub:Add_Sub|FourBit_CLA:GCLA4_1stStage"
+ 38. Port Connectivity Checks: "AU:Arithmetic_Unit|NBitRegister:InputB"
+ 39. Port Connectivity Checks: "keypad_input:Input_Unit|shift_reg:shift_reg"
+ 40. Port Connectivity Checks: "keypad_input:Input_Unit|keypad_base:keypad_base|keypad_fsm:keypad_fsm"
+ 41. Port Connectivity Checks: "keypad_input:Input_Unit|keypad_base:keypad_base|clock_div:keypad_clock_divider"
+ 42. Port Connectivity Checks: "keypad_input:Input_Unit|keypad_base:keypad_base"
+ 43. Port Connectivity Checks: "keypad_input:Input_Unit"
+ 44. Port Connectivity Checks: "CU:control_Unit|clk_ladder:slowerCLK"
+ 45. Post-Synthesis Netlist Statistics for Top Partition
+ 46. Elapsed Time Per Partition
+ 47. Analysis & Synthesis Messages
+ 48. Analysis & Synthesis Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2020  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                     ;
++------------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Sat Apr 27 16:01:14 2024       ;
+; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
+; Revision Name                      ; TermProject                                 ;
+; Top-level Entity Name              ; TermProject                                 ;
+; Family                             ; MAX 10                                      ;
+; Total logic elements               ; 516                                         ;
+;     Total combinational functions  ; 444                                         ;
+;     Dedicated logic registers      ; 217                                         ;
+; Total registers                    ; 217                                         ;
+; Total pins                         ; 28                                          ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 0                                           ;
+; Embedded Multiplier 9-bit elements ; 0                                           ;
+; Total PLLs                         ; 0                                           ;
+; UFM blocks                         ; 0                                           ;
+; ADC blocks                         ; 0                                           ;
++------------------------------------+---------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                              ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                           ; Setting            ; Default Value      ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                           ; 10M50DAF484C7G     ;                    ;
+; Top-level entity name                                            ; TermProject        ; TermProject        ;
+; Family name                                                      ; MAX 10             ; Cyclone V          ;
+; Use smart compilation                                            ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                      ; Off                ; Off                ;
+; Restructure Multiplexers                                         ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                              ; Off                ; Off                ;
+; Preserve fewer node names                                        ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                    ; Enable             ; Enable             ;
+; Verilog Version                                                  ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                     ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                         ; Auto               ; Auto               ;
+; Safe State Machine                                               ; Off                ; Off                ;
+; Extract Verilog State Machines                                   ; On                 ; On                 ;
+; Extract VHDL State Machines                                      ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                       ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                   ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                          ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                        ; On                 ; On                 ;
+; Parallel Synthesis                                               ; On                 ; On                 ;
+; DSP Block Balancing                                              ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                               ; On                 ; On                 ;
+; Power-Up Don't Care                                              ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                     ; Off                ; Off                ;
+; Remove Duplicate Registers                                       ; On                 ; On                 ;
+; Ignore CARRY Buffers                                             ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                           ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                            ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                        ; Off                ; Off                ;
+; Ignore LCELL Buffers                                             ; Off                ; Off                ;
+; Ignore SOFT Buffers                                              ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                   ; Off                ; Off                ;
+; Optimization Technique                                           ; Balanced           ; Balanced           ;
+; Carry Chain Length                                               ; 70                 ; 70                 ;
+; Auto Carry Chains                                                ; On                 ; On                 ;
+; Auto Open-Drain Pins                                             ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                            ; Off                ; Off                ;
+; Auto ROM Replacement                                             ; On                 ; On                 ;
+; Auto RAM Replacement                                             ; On                 ; On                 ;
+; Auto DSP Block Replacement                                       ; On                 ; On                 ;
+; Auto Shift Register Replacement                                  ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                  ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                    ; On                 ; On                 ;
+; Strict RAM Replacement                                           ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                           ; Off                ; Off                ;
+; Auto RAM Block Balancing                                         ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                ; Off                ; Off                ;
+; Auto Resource Sharing                                            ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                    ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing              ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                ; Off                ; Off                ;
+; Timing-Driven Synthesis                                          ; On                 ; On                 ;
+; Report Parameter Settings                                        ; On                 ; On                 ;
+; Report Source Assignments                                        ; On                 ; On                 ;
+; Report Connectivity Checks                                       ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                               ; Off                ; Off                ;
+; Synchronization Register Chain Length                            ; 2                  ; 2                  ;
+; Power Optimization During Synthesis                              ; Normal compilation ; Normal compilation ;
+; HDL message level                                                ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                  ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report         ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report               ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report        ; 100                ; 100                ;
+; Clock MUX Protection                                             ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                      ; Off                ; Off                ;
+; Block Design Naming                                              ; Auto               ; Auto               ;
+; SDC constraint protection                                        ; Off                ; Off                ;
+; Synthesis Effort                                                 ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal     ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                             ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                               ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                      ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                           ; On                 ; On                 ;
++------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 16          ;
+; Maximum allowed            ; 16          ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 16          ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   0.0%      ;
+;     Processors 3-16        ;   0.0%      ;
++----------------------------+-------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                            ;
++----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                                        ; Library ;
++----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------------------------------------+---------+
+; ../Div/shiftreg.sv               ; yes             ; User SystemVerilog HDL File  ; C:/Users/serva/OneDrive/Documents/Classes_Spring_2024/ADL/TermProject/Div/shiftreg.sv               ;         ;
+; ../Div/MUX.sv                    ; yes             ; User SystemVerilog HDL File  ; C:/Users/serva/OneDrive/Documents/Classes_Spring_2024/ADL/TermProject/Div/MUX.sv                    ;         ;
+; ../Div/Divider.sv                ; yes             ; User SystemVerilog HDL File  ; C:/Users/serva/OneDrive/Documents/Classes_Spring_2024/ADL/TermProject/Div/Divider.sv                ;         ;
+; ../Div/D_Control.sv              ; yes             ; User SystemVerilog HDL File  ; C:/Users/serva/OneDrive/Documents/Classes_Spring_2024/ADL/TermProject/Div/D_Control.sv              ;         ;
+; ../Div/alu.sv                    ; yes             ; User SystemVerilog HDL File  ; C:/Users/serva/OneDrive/Documents/Classes_Spring_2024/ADL/TermProject/Div/alu.sv                    ;         ;
+; ../Mul/Multiplier.sv             ; yes             ; User SystemVerilog HDL File  ; C:/Users/serva/OneDrive/Documents/Classes_Spring_2024/ADL/TermProject/Mul/Multiplier.sv             ;         ;
+; ../Mul/MultControl.sv            ; yes             ; User SystemVerilog HDL File  ; C:/Users/serva/OneDrive/Documents/Classes_Spring_2024/ADL/TermProject/Mul/MultControl.sv            ;         ;
+; EdgeDetect.sv                    ; yes             ; User SystemVerilog HDL File  ; C:/Users/serva/OneDrive/Documents/Classes_Spring_2024/ADL/TermProject/TermProject/EdgeDetect.sv     ;         ;
+; ../Add_Sub/GCLA_AddSub.sv        ; yes             ; User SystemVerilog HDL File  ; C:/Users/serva/OneDrive/Documents/Classes_Spring_2024/ADL/TermProject/Add_Sub/GCLA_AddSub.sv        ;         ;
+; ../Add_Sub/FourBit_CLA.sv        ; yes             ; User SystemVerilog HDL File  ; C:/Users/serva/OneDrive/Documents/Classes_Spring_2024/ADL/TermProject/Add_Sub/FourBit_CLA.sv        ;         ;
+; NBitRegister.sv                  ; yes             ; User SystemVerilog HDL File  ; C:/Users/serva/OneDrive/Documents/Classes_Spring_2024/ADL/TermProject/TermProject/NBitRegister.sv   ;         ;
+; shift_reg.sv                     ; yes             ; User SystemVerilog HDL File  ; C:/Users/serva/OneDrive/Documents/Classes_Spring_2024/ADL/TermProject/TermProject/shift_reg.sv      ;         ;
+; keypad_input.sv                  ; yes             ; User SystemVerilog HDL File  ; C:/Users/serva/OneDrive/Documents/Classes_Spring_2024/ADL/TermProject/TermProject/keypad_input.sv   ;         ;
+; keypad_fsm.sv                    ; yes             ; User SystemVerilog HDL File  ; C:/Users/serva/OneDrive/Documents/Classes_Spring_2024/ADL/TermProject/TermProject/keypad_fsm.sv     ;         ;
+; keypad_decoder.sv                ; yes             ; User SystemVerilog HDL File  ; C:/Users/serva/OneDrive/Documents/Classes_Spring_2024/ADL/TermProject/TermProject/keypad_decoder.sv ;         ;
+; keypad_base.sv                   ; yes             ; User SystemVerilog HDL File  ; C:/Users/serva/OneDrive/Documents/Classes_Spring_2024/ADL/TermProject/TermProject/keypad_base.sv    ;         ;
+; FSM.sv                           ; yes             ; User SystemVerilog HDL File  ; C:/Users/serva/OneDrive/Documents/Classes_Spring_2024/ADL/TermProject/TermProject/FSM.sv            ;         ;
+; four2one.sv                      ; yes             ; User SystemVerilog HDL File  ; C:/Users/serva/OneDrive/Documents/Classes_Spring_2024/ADL/TermProject/TermProject/four2one.sv       ;         ;
+; Controller.sv                    ; yes             ; User SystemVerilog HDL File  ; C:/Users/serva/OneDrive/Documents/Classes_Spring_2024/ADL/TermProject/TermProject/Controller.sv     ;         ;
+; clock_div.sv                     ; yes             ; User SystemVerilog HDL File  ; C:/Users/serva/OneDrive/Documents/Classes_Spring_2024/ADL/TermProject/TermProject/clock_div.sv      ;         ;
+; clk_ladder.sv                    ; yes             ; User SystemVerilog HDL File  ; C:/Users/serva/OneDrive/Documents/Classes_Spring_2024/ADL/TermProject/TermProject/clk_ladder.sv     ;         ;
+; binary2seven.sv                  ; yes             ; User SystemVerilog HDL File  ; C:/Users/serva/OneDrive/Documents/Classes_Spring_2024/ADL/TermProject/TermProject/binary2seven.sv   ;         ;
+; TermProject.sv                   ; yes             ; User SystemVerilog HDL File  ; C:/Users/serva/OneDrive/Documents/Classes_Spring_2024/ADL/TermProject/TermProject/TermProject.sv    ;         ;
+; CU.sv                            ; yes             ; User SystemVerilog HDL File  ; C:/Users/serva/OneDrive/Documents/Classes_Spring_2024/ADL/TermProject/TermProject/CU.sv             ;         ;
+; AU.sv                            ; yes             ; User SystemVerilog HDL File  ; C:/Users/serva/OneDrive/Documents/Classes_Spring_2024/ADL/TermProject/TermProject/AU.sv             ;         ;
+; M_U_X.sv                         ; yes             ; User SystemVerilog HDL File  ; C:/Users/serva/OneDrive/Documents/Classes_Spring_2024/ADL/TermProject/TermProject/M_U_X.sv          ;         ;
++----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------------------------------------+---------+
+
+
++---------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary             ;
++---------------------------------------------+-----------+
+; Resource                                    ; Usage     ;
++---------------------------------------------+-----------+
+; Estimated Total logic elements              ; 516       ;
+;                                             ;           ;
+; Total combinational functions               ; 444       ;
+; Logic element usage by number of LUT inputs ;           ;
+;     -- 4 input functions                    ; 152       ;
+;     -- 3 input functions                    ; 152       ;
+;     -- <=2 input functions                  ; 140       ;
+;                                             ;           ;
+; Logic elements by mode                      ;           ;
+;     -- normal mode                          ; 306       ;
+;     -- arithmetic mode                      ; 138       ;
+;                                             ;           ;
+; Total registers                             ; 217       ;
+;     -- Dedicated logic registers            ; 217       ;
+;     -- I/O registers                        ; 0         ;
+;                                             ;           ;
+; I/O pins                                    ; 28        ;
+;                                             ;           ;
+; Embedded Multiplier 9-bit elements          ; 0         ;
+;                                             ;           ;
+; Maximum fan-out node                        ; CLK~input ;
+; Maximum fan-out                             ; 131       ;
+; Total fan-out                               ; 2007      ;
+; Average fan-out                             ; 2.80      ;
++---------------------------------------------+-----------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                                ;
++----------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+------------------------------------------------------------------------------------------------+----------------+--------------+
+; Compilation Hierarchy Node                   ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                                                                            ; Entity Name    ; Library Name ;
++----------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+------------------------------------------------------------------------------------------------+----------------+--------------+
+; |TermProject                                 ; 444 (1)             ; 217 (0)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 28   ; 0            ; 0          ; |TermProject                                                                                   ; TermProject    ; work         ;
+;    |AU:Arithmetic_Unit|                      ; 287 (11)            ; 135 (0)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |TermProject|AU:Arithmetic_Unit                                                                ; AU             ; work         ;
+;       |Divider:DIVIDE|                       ; 99 (18)             ; 38 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |TermProject|AU:Arithmetic_Unit|Divider:DIVIDE                                                 ; Divider        ; work         ;
+;          |D_Control:DivCtrl|                 ; 16 (16)             ; 13 (13)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |TermProject|AU:Arithmetic_Unit|Divider:DIVIDE|D_Control:DivCtrl                               ; D_Control      ; work         ;
+;          |MUX:Mux1|                          ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |TermProject|AU:Arithmetic_Unit|Divider:DIVIDE|MUX:Mux1                                        ; MUX            ; work         ;
+;          |alu:AdSb|                          ; 19 (19)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |TermProject|AU:Arithmetic_Unit|Divider:DIVIDE|alu:AdSb                                        ; alu            ; work         ;
+;          |shiftreg:Dreg|                     ; 8 (8)               ; 8 (8)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |TermProject|AU:Arithmetic_Unit|Divider:DIVIDE|shiftreg:Dreg                                   ; shiftreg       ; work         ;
+;          |shiftreg:Qreg|                     ; 10 (10)             ; 8 (8)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |TermProject|AU:Arithmetic_Unit|Divider:DIVIDE|shiftreg:Qreg                                   ; shiftreg       ; work         ;
+;          |shiftreg:Rreg|                     ; 27 (27)             ; 9 (9)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |TermProject|AU:Arithmetic_Unit|Divider:DIVIDE|shiftreg:Rreg                                   ; shiftreg       ; work         ;
+;       |GCLA_AddSub:Add_Sub|                  ; 25 (8)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |TermProject|AU:Arithmetic_Unit|GCLA_AddSub:Add_Sub                                            ; GCLA_AddSub    ; work         ;
+;          |FourBit_CLA:GCLA4_1stStage|        ; 10 (10)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |TermProject|AU:Arithmetic_Unit|GCLA_AddSub:Add_Sub|FourBit_CLA:GCLA4_1stStage                 ; FourBit_CLA    ; work         ;
+;          |FourBit_CLA:GCLA4_2ndStage|        ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |TermProject|AU:Arithmetic_Unit|GCLA_AddSub:Add_Sub|FourBit_CLA:GCLA4_2ndStage                 ; FourBit_CLA    ; work         ;
+;       |M_U_X:MUX|                            ; 34 (34)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |TermProject|AU:Arithmetic_Unit|M_U_X:MUX                                                      ; M_U_X          ; work         ;
+;       |Multiplier:Mult|                      ; 110 (100)           ; 41 (36)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |TermProject|AU:Arithmetic_Unit|Multiplier:Mult                                                ; Multiplier     ; work         ;
+;          |MultControl:Ctrl|                  ; 10 (10)             ; 5 (5)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |TermProject|AU:Arithmetic_Unit|Multiplier:Mult|MultControl:Ctrl                               ; MultControl    ; work         ;
+;       |NBitRegister:InputA|                  ; 0 (0)               ; 16 (16)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |TermProject|AU:Arithmetic_Unit|NBitRegister:InputA                                            ; NBitRegister   ; work         ;
+;       |NBitRegister:InputB|                  ; 0 (0)               ; 8 (8)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |TermProject|AU:Arithmetic_Unit|NBitRegister:InputB                                            ; NBitRegister   ; work         ;
+;       |NBitRegister:QUOTIENT|                ; 8 (8)               ; 8 (8)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |TermProject|AU:Arithmetic_Unit|NBitRegister:QUOTIENT                                          ; NBitRegister   ; work         ;
+;       |NBitRegister:REMAINDER|               ; 0 (0)               ; 8 (8)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |TermProject|AU:Arithmetic_Unit|NBitRegister:REMAINDER                                         ; NBitRegister   ; work         ;
+;       |NBitRegister:regR|                    ; 0 (0)               ; 16 (16)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |TermProject|AU:Arithmetic_Unit|NBitRegister:regR                                              ; NBitRegister   ; work         ;
+;    |CU:control_Unit|                         ; 28 (13)             ; 5 (3)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |TermProject|CU:control_Unit                                                                   ; CU             ; work         ;
+;       |EdgeDetect:detect|                    ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |TermProject|CU:control_Unit|EdgeDetect:detect                                                 ; EdgeDetect     ; work         ;
+;       |clk_ladder:slowerCLK|                 ; 15 (15)             ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |TermProject|CU:control_Unit|clk_ladder:slowerCLK                                              ; clk_ladder     ; work         ;
+;    |Controller:Output_Unit|                  ; 39 (0)              ; 20 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |TermProject|Controller:Output_Unit                                                            ; Controller     ; work         ;
+;       |FSM:digit|                            ; 6 (6)               ; 2 (2)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |TermProject|Controller:Output_Unit|FSM:digit                                                  ; FSM            ; work         ;
+;       |binary2seven:Hex|                     ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |TermProject|Controller:Output_Unit|binary2seven:Hex                                           ; binary2seven   ; work         ;
+;       |clk_ladder:clock|                     ; 18 (18)             ; 18 (18)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |TermProject|Controller:Output_Unit|clk_ladder:clock                                           ; clk_ladder     ; work         ;
+;       |four2one:decoder|                     ; 8 (8)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |TermProject|Controller:Output_Unit|four2one:decoder                                           ; four2one       ; work         ;
+;    |keypad_input:Input_Unit|                 ; 89 (0)              ; 57 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |TermProject|keypad_input:Input_Unit                                                           ; keypad_input   ; work         ;
+;       |keypad_base:keypad_base|              ; 89 (2)              ; 41 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |TermProject|keypad_input:Input_Unit|keypad_base:keypad_base                                   ; keypad_base    ; work         ;
+;          |clock_div:keypad_clock_divider|    ; 50 (50)             ; 33 (33)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |TermProject|keypad_input:Input_Unit|keypad_base:keypad_base|clock_div:keypad_clock_divider    ; clock_div      ; work         ;
+;          |keypad_decoder:keypad_key_decoder| ; 21 (21)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |TermProject|keypad_input:Input_Unit|keypad_base:keypad_base|keypad_decoder:keypad_key_decoder ; keypad_decoder ; work         ;
+;          |keypad_fsm:keypad_fsm|             ; 16 (16)             ; 8 (8)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |TermProject|keypad_input:Input_Unit|keypad_base:keypad_base|keypad_fsm:keypad_fsm             ; keypad_fsm     ; work         ;
+;       |shift_reg:shift_reg|                  ; 0 (0)               ; 16 (16)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |TermProject|keypad_input:Input_Unit|shift_reg:shift_reg                                       ; shift_reg      ; work         ;
++----------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+------------------------------------------------------------------------------------------------+----------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
+Encoding Type:  One-Hot
++------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |TermProject|AU:Arithmetic_Unit|Divider:DIVIDE|D_Control:DivCtrl|State                                                                           ;
++---------------+------------+---------------+---------------+---------------+---------------+---------------+------------+-------------+------------+-------------+
+; Name          ; State.Ends ; State.Restore ; State.Shifts4 ; State.Shifts3 ; State.Shifts2 ; State.Shifts1 ; State.Subs ; State.Subs1 ; State.Adds ; State.Inits ;
++---------------+------------+---------------+---------------+---------------+---------------+---------------+------------+-------------+------------+-------------+
+; State.Inits   ; 0          ; 0             ; 0             ; 0             ; 0             ; 0             ; 0          ; 0           ; 0          ; 0           ;
+; State.Adds    ; 0          ; 0             ; 0             ; 0             ; 0             ; 0             ; 0          ; 0           ; 1          ; 1           ;
+; State.Subs1   ; 0          ; 0             ; 0             ; 0             ; 0             ; 0             ; 0          ; 1           ; 0          ; 1           ;
+; State.Subs    ; 0          ; 0             ; 0             ; 0             ; 0             ; 0             ; 1          ; 0           ; 0          ; 1           ;
+; State.Shifts1 ; 0          ; 0             ; 0             ; 0             ; 0             ; 1             ; 0          ; 0           ; 0          ; 1           ;
+; State.Shifts2 ; 0          ; 0             ; 0             ; 0             ; 1             ; 0             ; 0          ; 0           ; 0          ; 1           ;
+; State.Shifts3 ; 0          ; 0             ; 0             ; 1             ; 0             ; 0             ; 0          ; 0           ; 0          ; 1           ;
+; State.Shifts4 ; 0          ; 0             ; 1             ; 0             ; 0             ; 0             ; 0          ; 0           ; 0          ; 1           ;
+; State.Restore ; 0          ; 1             ; 0             ; 0             ; 0             ; 0             ; 0          ; 0           ; 0          ; 1           ;
+; State.Ends    ; 1          ; 0             ; 0             ; 0             ; 0             ; 0             ; 0          ; 0           ; 0          ; 1           ;
++---------------+------------+---------------+---------------+---------------+---------------+---------------+------------+-------------+------------+-------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                                           ;
++-------------------------------------------------------------+----------------------------------------------------------------+
+; Register name                                               ; Reason for Removal                                             ;
++-------------------------------------------------------------+----------------------------------------------------------------+
+; AU:Arithmetic_Unit|Multiplier:Mult|RegM[7..9,11..15]        ; Merged with AU:Arithmetic_Unit|Multiplier:Mult|RegM[10]        ;
+; CU:control_Unit|clk_ladder:slowerCLK|ladder[0]              ; Merged with Controller:Output_Unit|clk_ladder:clock|ladder[0]  ;
+; CU:control_Unit|clk_ladder:slowerCLK|ladder[1]              ; Merged with Controller:Output_Unit|clk_ladder:clock|ladder[1]  ;
+; CU:control_Unit|clk_ladder:slowerCLK|ladder[2]              ; Merged with Controller:Output_Unit|clk_ladder:clock|ladder[2]  ;
+; CU:control_Unit|clk_ladder:slowerCLK|ladder[3]              ; Merged with Controller:Output_Unit|clk_ladder:clock|ladder[3]  ;
+; CU:control_Unit|clk_ladder:slowerCLK|ladder[4]              ; Merged with Controller:Output_Unit|clk_ladder:clock|ladder[4]  ;
+; CU:control_Unit|clk_ladder:slowerCLK|ladder[5]              ; Merged with Controller:Output_Unit|clk_ladder:clock|ladder[5]  ;
+; CU:control_Unit|clk_ladder:slowerCLK|ladder[6]              ; Merged with Controller:Output_Unit|clk_ladder:clock|ladder[6]  ;
+; CU:control_Unit|clk_ladder:slowerCLK|ladder[7]              ; Merged with Controller:Output_Unit|clk_ladder:clock|ladder[7]  ;
+; CU:control_Unit|clk_ladder:slowerCLK|ladder[8]              ; Merged with Controller:Output_Unit|clk_ladder:clock|ladder[8]  ;
+; CU:control_Unit|clk_ladder:slowerCLK|ladder[9]              ; Merged with Controller:Output_Unit|clk_ladder:clock|ladder[9]  ;
+; CU:control_Unit|clk_ladder:slowerCLK|ladder[10]             ; Merged with Controller:Output_Unit|clk_ladder:clock|ladder[10] ;
+; CU:control_Unit|clk_ladder:slowerCLK|ladder[11]             ; Merged with Controller:Output_Unit|clk_ladder:clock|ladder[11] ;
+; CU:control_Unit|clk_ladder:slowerCLK|ladder[12]             ; Merged with Controller:Output_Unit|clk_ladder:clock|ladder[12] ;
+; CU:control_Unit|clk_ladder:slowerCLK|ladder[13]             ; Merged with Controller:Output_Unit|clk_ladder:clock|ladder[13] ;
+; CU:control_Unit|clk_ladder:slowerCLK|ladder[14]             ; Merged with Controller:Output_Unit|clk_ladder:clock|ladder[14] ;
+; AU:Arithmetic_Unit|Divider:DIVIDE|D_Control:DivCtrl|State~2 ; Lost fanout                                                    ;
+; AU:Arithmetic_Unit|Divider:DIVIDE|D_Control:DivCtrl|State~3 ; Lost fanout                                                    ;
+; AU:Arithmetic_Unit|Divider:DIVIDE|D_Control:DivCtrl|State~4 ; Lost fanout                                                    ;
+; AU:Arithmetic_Unit|Divider:DIVIDE|D_Control:DivCtrl|State~5 ; Lost fanout                                                    ;
+; Controller:Output_Unit|clk_ladder:clock|ladder[18..31]      ; Lost fanout                                                    ;
+; CU:control_Unit|clk_ladder:slowerCLK|ladder[16..31]         ; Lost fanout                                                    ;
+; Total Number of Removed Registers = 57                      ;                                                                ;
++-------------------------------------------------------------+----------------------------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 217   ;
+; Number of registers using Synchronous Clear  ; 21    ;
+; Number of registers using Synchronous Load   ; 17    ;
+; Number of registers using Asynchronous Clear ; 82    ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 61    ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++------------------------------------------------------------------------+
+; Inverted Register Statistics                                           ;
++--------------------------------------------------------------+---------+
+; Inverted Register                                            ; Fan out ;
++--------------------------------------------------------------+---------+
+; AU:Arithmetic_Unit|Multiplier:Mult|MultControl:Ctrl|state[0] ; 43      ;
+; Total number of inverted registers = 1                       ;         ;
++--------------------------------------------------------------+---------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                                          ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------------------------------+
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |TermProject|AU:Arithmetic_Unit|Multiplier:Mult|RegQ[5]                                   ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |TermProject|AU:Arithmetic_Unit|Divider:DIVIDE|D_Control:DivCtrl|Count[2]                 ;
+; 4:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; Yes        ; |TermProject|AU:Arithmetic_Unit|Multiplier:Mult|RegA[4]                                   ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |TermProject|AU:Arithmetic_Unit|Divider:DIVIDE|shiftreg:Qreg|Q[2]                         ;
+; 16:1               ; 4 bits    ; 40 LEs        ; 12 LEs               ; 28 LEs                 ; Yes        ; |TermProject|keypad_input:Input_Unit|keypad_base:keypad_base|keypad_fsm:keypad_fsm|col[3] ;
+; 6:1                ; 7 bits    ; 28 LEs        ; 21 LEs               ; 7 LEs                  ; Yes        ; |TermProject|AU:Arithmetic_Unit|Divider:DIVIDE|shiftreg:Rreg|Q[4]                         ;
+; 32:1               ; 2 bits    ; 42 LEs        ; 14 LEs               ; 28 LEs                 ; Yes        ; |TermProject|AU:Arithmetic_Unit|Multiplier:Mult|MultControl:Ctrl|state[1]                 ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |TermProject|Controller:Output_Unit|four2one:decoder|Mux1                                 ;
+; 4:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; No         ; |TermProject|AU:Arithmetic_Unit|M_U_X:MUX|Rout[3]                                         ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; No         ; |TermProject|AU:Arithmetic_Unit|Divider:DIVIDE|D_Control:DivCtrl|Selector0                ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: CU:control_Unit ;
++----------------+-------+-------------------------------------+
+; Parameter Name ; Value ; Type                                ;
++----------------+-------+-------------------------------------+
+; WAIT           ; 000   ; Unsigned Binary                     ;
+; LoadA          ; 001   ; Unsigned Binary                     ;
+; LoadB          ; 011   ; Unsigned Binary                     ;
+; ADD            ; 010   ; Unsigned Binary                     ;
+; SUB            ; 100   ; Unsigned Binary                     ;
+; MUL            ; 101   ; Unsigned Binary                     ;
+; DIV            ; 111   ; Unsigned Binary                     ;
++----------------+-------+-------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: CU:control_Unit|clk_ladder:slowerCLK ;
++----------------+-------+----------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                     ;
++----------------+-------+----------------------------------------------------------+
+; N              ; 32    ; Signed Integer                                           ;
++----------------+-------+----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: keypad_input:Input_Unit ;
++----------------+-------+---------------------------------------------+
+; Parameter Name ; Value ; Type                                        ;
++----------------+-------+---------------------------------------------+
+; DIGITS         ; 4     ; Signed Integer                              ;
++----------------+-------+---------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: keypad_input:Input_Unit|keypad_base:keypad_base|clock_div:keypad_clock_divider ;
++----------------+--------+---------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value  ; Type                                                                                              ;
++----------------+--------+---------------------------------------------------------------------------------------------------+
+; WIDTH          ; 32     ; Signed Integer                                                                                    ;
+; DIV            ; 100000 ; Signed Integer                                                                                    ;
++----------------+--------+---------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: keypad_input:Input_Unit|keypad_base:keypad_base|keypad_decoder:keypad_key_decoder ;
++----------------+-------+-------------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                                  ;
++----------------+-------+-------------------------------------------------------------------------------------------------------+
+; BASE           ; 16    ; Signed Integer                                                                                        ;
++----------------+-------+-------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: keypad_input:Input_Unit|shift_reg:shift_reg ;
++----------------+-------+-----------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                            ;
++----------------+-------+-----------------------------------------------------------------+
+; COUNT          ; 4     ; Signed Integer                                                  ;
+; WIDTH          ; 4     ; Signed Integer                                                  ;
++----------------+-------+-----------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: AU:Arithmetic_Unit|NBitRegister:InputA ;
++----------------+-------+------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                       ;
++----------------+-------+------------------------------------------------------------+
+; N              ; 16    ; Signed Integer                                             ;
++----------------+-------+------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: AU:Arithmetic_Unit|NBitRegister:InputB ;
++----------------+-------+------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                       ;
++----------------+-------+------------------------------------------------------------+
+; N              ; 8     ; Signed Integer                                             ;
++----------------+-------+------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: AU:Arithmetic_Unit|Multiplier:Mult|MultControl:Ctrl ;
++----------------+-------+-------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                    ;
++----------------+-------+-------------------------------------------------------------------------+
+; StartS         ; 00001 ; Unsigned Binary                                                         ;
+; TestS          ; 00010 ; Unsigned Binary                                                         ;
+; AddS           ; 00100 ; Unsigned Binary                                                         ;
+; ShiftS         ; 01000 ; Unsigned Binary                                                         ;
+; HaltS          ; 10000 ; Unsigned Binary                                                         ;
++----------------+-------+-------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: AU:Arithmetic_Unit|NBitRegister:regR ;
++----------------+-------+----------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                     ;
++----------------+-------+----------------------------------------------------------+
+; N              ; 16    ; Signed Integer                                           ;
++----------------+-------+----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: AU:Arithmetic_Unit|Divider:DIVIDE|MUX:Mux1 ;
++----------------+-------+----------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                           ;
++----------------+-------+----------------------------------------------------------------+
+; N              ; 9     ; Signed Integer                                                 ;
++----------------+-------+----------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: AU:Arithmetic_Unit|Divider:DIVIDE|shiftreg:Rreg ;
++----------------+-------+---------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                ;
++----------------+-------+---------------------------------------------------------------------+
+; N              ; 9     ; Signed Integer                                                      ;
++----------------+-------+---------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: AU:Arithmetic_Unit|Divider:DIVIDE|shiftreg:Qreg ;
++----------------+-------+---------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                ;
++----------------+-------+---------------------------------------------------------------------+
+; N              ; 8     ; Signed Integer                                                      ;
++----------------+-------+---------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: AU:Arithmetic_Unit|Divider:DIVIDE|shiftreg:Dreg ;
++----------------+-------+---------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                ;
++----------------+-------+---------------------------------------------------------------------+
+; N              ; 8     ; Signed Integer                                                      ;
++----------------+-------+---------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: AU:Arithmetic_Unit|Divider:DIVIDE|alu:AdSb ;
++----------------+-------+----------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                           ;
++----------------+-------+----------------------------------------------------------------+
+; N              ; 8     ; Signed Integer                                                 ;
++----------------+-------+----------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: AU:Arithmetic_Unit|Divider:DIVIDE|D_Control:DivCtrl ;
++----------------+-------+-------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                    ;
++----------------+-------+-------------------------------------------------------------------------+
+; Inits          ; 0000  ; Unsigned Binary                                                         ;
+; Adds           ; 0001  ; Unsigned Binary                                                         ;
+; Subs1          ; 0010  ; Unsigned Binary                                                         ;
+; Subs           ; 0011  ; Unsigned Binary                                                         ;
+; Shifts1        ; 0100  ; Unsigned Binary                                                         ;
+; Shifts2        ; 0101  ; Unsigned Binary                                                         ;
+; Shifts3        ; 0110  ; Unsigned Binary                                                         ;
+; Shifts4        ; 0111  ; Unsigned Binary                                                         ;
+; Restore        ; 1000  ; Unsigned Binary                                                         ;
+; Ends           ; 1001  ; Unsigned Binary                                                         ;
++----------------+-------+-------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: AU:Arithmetic_Unit|NBitRegister:QUOTIENT ;
++----------------+-------+--------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                         ;
++----------------+-------+--------------------------------------------------------------+
+; N              ; 8     ; Signed Integer                                               ;
++----------------+-------+--------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: AU:Arithmetic_Unit|NBitRegister:REMAINDER ;
++----------------+-------+---------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                          ;
++----------------+-------+---------------------------------------------------------------+
+; N              ; 8     ; Signed Integer                                                ;
++----------------+-------+---------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Controller:Output_Unit|clk_ladder:clock ;
++----------------+-------+-------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                        ;
++----------------+-------+-------------------------------------------------------------+
+; N              ; 32    ; Signed Integer                                              ;
++----------------+-------+-------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Controller:Output_Unit|binary2seven:Hex"                                                                                                    ;
++------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                                                                                      ;
++------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; MODE ; Input ; Warning  ; Input port expression (1 bits) is smaller than the input port (4 bits) it drives.  Extra input bit(s) "MODE[3..1]" will be connected to GND. ;
++------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Controller:Output_Unit|clk_ladder:clock"                                                      ;
++----------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port           ; Type   ; Severity ; Details                                                                             ;
++----------------+--------+----------+-------------------------------------------------------------------------------------+
+; ladder[31..18] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; ladder[16..0]  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++----------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------+
+; Port Connectivity Checks: "Controller:Output_Unit" ;
++------+-------+----------+--------------------------+
+; Port ; Type  ; Severity ; Details                  ;
++------+-------+----------+--------------------------+
+; MODE ; Input ; Info     ; Stuck at VCC             ;
++------+-------+----------+--------------------------+
+
+
++-----------------------------------------------------------------------------+
+; Port Connectivity Checks: "AU:Arithmetic_Unit|Divider:DIVIDE|shiftreg:Dreg" ;
++-------+-------+----------+--------------------------------------------------+
+; Port  ; Type  ; Severity ; Details                                          ;
++-------+-------+----------+--------------------------------------------------+
+; SH    ; Input ; Info     ; Stuck at GND                                     ;
+; SerIn ; Input ; Info     ; Stuck at GND                                     ;
++-------+-------+----------+--------------------------------------------------+
+
+
++------------------------------------------------------------------------+
+; Port Connectivity Checks: "AU:Arithmetic_Unit|Divider:DIVIDE|MUX:Mux1" ;
++------+-------+----------+----------------------------------------------+
+; Port ; Type  ; Severity ; Details                                      ;
++------+-------+----------+----------------------------------------------+
+; B[8] ; Input ; Info     ; Stuck at GND                                 ;
++------+-------+----------+----------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "AU:Arithmetic_Unit|GCLA_AddSub:Add_Sub|FourBit_CLA:GCLA4_1stStage"                                       ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                                                  ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; C7   ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "AU:Arithmetic_Unit|NBitRegister:InputB"                                                                                                                                          ;
++------+-------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                                                                                                                           ;
++------+-------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; D    ; Input ; Warning  ; Input port expression (16 bits) is wider than the input port (8 bits) it drives.  The 8 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
++------+-------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "keypad_input:Input_Unit|shift_reg:shift_reg"                                                                                                ;
++------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                                                                                      ;
++------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; dir  ; Input ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
++------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "keypad_input:Input_Unit|keypad_base:keypad_base|keypad_fsm:keypad_fsm"                                    ;
++-------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; Port  ; Type   ; Severity ; Details                                                                                                  ;
++-------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; state ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
+; trig  ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
++-------+--------+----------+----------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "keypad_input:Input_Unit|keypad_base:keypad_base|clock_div:keypad_clock_divider"                                                              ;
++-------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port  ; Type  ; Severity ; Details                                                                                                                                      ;
++-------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; reset ; Input ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
++-------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "keypad_input:Input_Unit|keypad_base:keypad_base"                                                                ;
++-------------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; Port        ; Type   ; Severity ; Details                                                                                                  ;
++-------------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; slow_clock  ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
+; sense       ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
+; valid_digit ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
+; inv_row     ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
++-------------+--------+----------+----------------------------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "keypad_input:Input_Unit"                                                                                  ;
++-------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; Port  ; Type   ; Severity ; Details                                                                                                  ;
++-------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; value ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
+; trig  ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
++-------+--------+----------+----------------------------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "CU:control_Unit|clk_ladder:slowerCLK"                                                         ;
++----------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port           ; Type   ; Severity ; Details                                                                             ;
++----------------+--------+----------+-------------------------------------------------------------------------------------+
+; ladder[31..16] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; ladder[14..0]  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++----------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 28                          ;
+; cycloneiii_ff         ; 217                         ;
+;     CLR               ; 82                          ;
+;     ENA               ; 29                          ;
+;     ENA SCLR          ; 17                          ;
+;     ENA SLD           ; 15                          ;
+;     SCLR              ; 4                           ;
+;     SLD               ; 2                           ;
+;     plain             ; 68                          ;
+; cycloneiii_lcell_comb ; 451                         ;
+;     arith             ; 138                         ;
+;         2 data inputs ; 81                          ;
+;         3 data inputs ; 57                          ;
+;     normal            ; 313                         ;
+;         0 data inputs ; 1                           ;
+;         1 data inputs ; 18                          ;
+;         2 data inputs ; 47                          ;
+;         3 data inputs ; 95                          ;
+;         4 data inputs ; 152                         ;
+;                       ;                             ;
+; Max LUT depth         ; 13.00                       ;
+; Average LUT depth     ; 5.23                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+    Info: Processing started: Sat Apr 27 16:01:05 2024
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off TermProject -c TermProject
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file /users/serva/onedrive/documents/classes_spring_2024/adl/termproject/div/shiftreg.sv
+    Info (12023): Found entity 1: shiftreg File: C:/Users/serva/OneDrive/Documents/Classes_Spring_2024/ADL/TermProject/Div/shiftreg.sv Line: 1
+Warning (12090): Entity "MUX" obtained from "../Div/MUX.sv" instead of from Quartus Prime megafunction library File: C:/Users/serva/OneDrive/Documents/Classes_Spring_2024/ADL/TermProject/Div/MUX.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file /users/serva/onedrive/documents/classes_spring_2024/adl/termproject/div/mux.sv
+    Info (12023): Found entity 1: MUX File: C:/Users/serva/OneDrive/Documents/Classes_Spring_2024/ADL/TermProject/Div/MUX.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file /users/serva/onedrive/documents/classes_spring_2024/adl/termproject/div/divider.sv
+    Info (12023): Found entity 1: Divider File: C:/Users/serva/OneDrive/Documents/Classes_Spring_2024/ADL/TermProject/Div/Divider.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file /users/serva/onedrive/documents/classes_spring_2024/adl/termproject/div/d_control.sv
+    Info (12023): Found entity 1: D_Control File: C:/Users/serva/OneDrive/Documents/Classes_Spring_2024/ADL/TermProject/Div/D_Control.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file /users/serva/onedrive/documents/classes_spring_2024/adl/termproject/div/alu.sv
+    Info (12023): Found entity 1: alu File: C:/Users/serva/OneDrive/Documents/Classes_Spring_2024/ADL/TermProject/Div/alu.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file /users/serva/onedrive/documents/classes_spring_2024/adl/termproject/mul/multiplier.sv
+    Info (12023): Found entity 1: Multiplier File: C:/Users/serva/OneDrive/Documents/Classes_Spring_2024/ADL/TermProject/Mul/Multiplier.sv Line: 2
+Info (12021): Found 1 design units, including 1 entities, in source file /users/serva/onedrive/documents/classes_spring_2024/adl/termproject/mul/multcontrol.sv
+    Info (12023): Found entity 1: MultControl File: C:/Users/serva/OneDrive/Documents/Classes_Spring_2024/ADL/TermProject/Mul/MultControl.sv Line: 2
+Info (12021): Found 1 design units, including 1 entities, in source file edgedetect.sv
+    Info (12023): Found entity 1: EdgeDetect File: C:/Users/serva/OneDrive/Documents/Classes_Spring_2024/ADL/TermProject/TermProject/EdgeDetect.sv Line: 1
+Warning (10275): Verilog HDL Module Instantiation warning at GCLA_AddSub.sv(23): ignored dangling comma in List of Port Connections File: C:/Users/serva/OneDrive/Documents/Classes_Spring_2024/ADL/TermProject/Add_Sub/GCLA_AddSub.sv Line: 23
+Info (12021): Found 1 design units, including 1 entities, in source file /users/serva/onedrive/documents/classes_spring_2024/adl/termproject/add_sub/gcla_addsub.sv
+    Info (12023): Found entity 1: GCLA_AddSub File: C:/Users/serva/OneDrive/Documents/Classes_Spring_2024/ADL/TermProject/Add_Sub/GCLA_AddSub.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file /users/serva/onedrive/documents/classes_spring_2024/adl/termproject/add_sub/fourbit_cla.sv
+    Info (12023): Found entity 1: FourBit_CLA File: C:/Users/serva/OneDrive/Documents/Classes_Spring_2024/ADL/TermProject/Add_Sub/FourBit_CLA.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file /users/serva/onedrive/documents/classes_spring_2024/adl/termproject/add_sub/conditioncode.sv
+    Info (12023): Found entity 1: ConditionCode File: C:/Users/serva/OneDrive/Documents/Classes_Spring_2024/ADL/TermProject/Add_Sub/ConditionCode.sv Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file nbitregister.sv
+    Info (12023): Found entity 1: NBitRegister File: C:/Users/serva/OneDrive/Documents/Classes_Spring_2024/ADL/TermProject/TermProject/NBitRegister.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file twosign.sv
+    Info (12023): Found entity 1: twoSIGN File: C:/Users/serva/OneDrive/Documents/Classes_Spring_2024/ADL/TermProject/TermProject/twoSIGN.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file shift_reg.sv
+    Info (12023): Found entity 1: shift_reg File: C:/Users/serva/OneDrive/Documents/Classes_Spring_2024/ADL/TermProject/TermProject/shift_reg.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file keypad_input.sv
+    Info (12023): Found entity 1: keypad_input File: C:/Users/serva/OneDrive/Documents/Classes_Spring_2024/ADL/TermProject/TermProject/keypad_input.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file keypad_fsm.sv
+    Info (12023): Found entity 1: keypad_fsm File: C:/Users/serva/OneDrive/Documents/Classes_Spring_2024/ADL/TermProject/TermProject/keypad_fsm.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file keypad_decoder.sv
+    Info (12023): Found entity 1: keypad_decoder File: C:/Users/serva/OneDrive/Documents/Classes_Spring_2024/ADL/TermProject/TermProject/keypad_decoder.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file keypad_base.sv
+    Info (12023): Found entity 1: keypad_base File: C:/Users/serva/OneDrive/Documents/Classes_Spring_2024/ADL/TermProject/TermProject/keypad_base.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file halfadder.sv
+    Info (12023): Found entity 1: halfADDER File: C:/Users/serva/OneDrive/Documents/Classes_Spring_2024/ADL/TermProject/TermProject/halfADDER.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file fsm.sv
+    Info (12023): Found entity 1: FSM File: C:/Users/serva/OneDrive/Documents/Classes_Spring_2024/ADL/TermProject/TermProject/FSM.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file four2one.sv
+    Info (12023): Found entity 1: four2one File: C:/Users/serva/OneDrive/Documents/Classes_Spring_2024/ADL/TermProject/TermProject/four2one.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file controller.sv
+    Info (12023): Found entity 1: Controller File: C:/Users/serva/OneDrive/Documents/Classes_Spring_2024/ADL/TermProject/TermProject/Controller.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file clock_div.sv
+    Info (12023): Found entity 1: clock_div File: C:/Users/serva/OneDrive/Documents/Classes_Spring_2024/ADL/TermProject/TermProject/clock_div.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file clk_ladder.sv
+    Info (12023): Found entity 1: clk_ladder File: C:/Users/serva/OneDrive/Documents/Classes_Spring_2024/ADL/TermProject/TermProject/clk_ladder.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file binary2seven.sv
+    Info (12023): Found entity 1: binary2seven File: C:/Users/serva/OneDrive/Documents/Classes_Spring_2024/ADL/TermProject/TermProject/binary2seven.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file termproject.sv
+    Info (12023): Found entity 1: TermProject File: C:/Users/serva/OneDrive/Documents/Classes_Spring_2024/ADL/TermProject/TermProject/TermProject.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file cu.sv
+    Info (12023): Found entity 1: CU File: C:/Users/serva/OneDrive/Documents/Classes_Spring_2024/ADL/TermProject/TermProject/CU.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file au.sv
+    Info (12023): Found entity 1: AU File: C:/Users/serva/OneDrive/Documents/Classes_Spring_2024/ADL/TermProject/TermProject/AU.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file m_u_x.sv
+    Info (12023): Found entity 1: M_U_X File: C:/Users/serva/OneDrive/Documents/Classes_Spring_2024/ADL/TermProject/TermProject/M_U_X.sv Line: 1
+Warning (10236): Verilog HDL Implicit Net warning at FourBit_CLA.sv(24): created implicit net for "Cout" File: C:/Users/serva/OneDrive/Documents/Classes_Spring_2024/ADL/TermProject/Add_Sub/FourBit_CLA.sv Line: 24
+Info (12127): Elaborating entity "TermProject" for the top level hierarchy
+Info (12128): Elaborating entity "CU" for hierarchy "CU:control_Unit" File: C:/Users/serva/OneDrive/Documents/Classes_Spring_2024/ADL/TermProject/TermProject/TermProject.sv Line: 29
+Info (12128): Elaborating entity "clk_ladder" for hierarchy "CU:control_Unit|clk_ladder:slowerCLK" File: C:/Users/serva/OneDrive/Documents/Classes_Spring_2024/ADL/TermProject/TermProject/CU.sv Line: 19
+Info (12128): Elaborating entity "EdgeDetect" for hierarchy "CU:control_Unit|EdgeDetect:detect" File: C:/Users/serva/OneDrive/Documents/Classes_Spring_2024/ADL/TermProject/TermProject/CU.sv Line: 26
+Info (12128): Elaborating entity "keypad_input" for hierarchy "keypad_input:Input_Unit" File: C:/Users/serva/OneDrive/Documents/Classes_Spring_2024/ADL/TermProject/TermProject/TermProject.sv Line: 40
+Info (12128): Elaborating entity "keypad_base" for hierarchy "keypad_input:Input_Unit|keypad_base:keypad_base" File: C:/Users/serva/OneDrive/Documents/Classes_Spring_2024/ADL/TermProject/TermProject/keypad_input.sv Line: 19
+Info (12128): Elaborating entity "clock_div" for hierarchy "keypad_input:Input_Unit|keypad_base:keypad_base|clock_div:keypad_clock_divider" File: C:/Users/serva/OneDrive/Documents/Classes_Spring_2024/ADL/TermProject/TermProject/keypad_base.sv Line: 20
+Info (12128): Elaborating entity "keypad_fsm" for hierarchy "keypad_input:Input_Unit|keypad_base:keypad_base|keypad_fsm:keypad_fsm" File: C:/Users/serva/OneDrive/Documents/Classes_Spring_2024/ADL/TermProject/TermProject/keypad_base.sv Line: 28
+Info (12128): Elaborating entity "keypad_decoder" for hierarchy "keypad_input:Input_Unit|keypad_base:keypad_base|keypad_decoder:keypad_key_decoder" File: C:/Users/serva/OneDrive/Documents/Classes_Spring_2024/ADL/TermProject/TermProject/keypad_base.sv Line: 36
+Info (12128): Elaborating entity "shift_reg" for hierarchy "keypad_input:Input_Unit|shift_reg:shift_reg" File: C:/Users/serva/OneDrive/Documents/Classes_Spring_2024/ADL/TermProject/TermProject/keypad_input.sv Line: 27
+Info (12128): Elaborating entity "AU" for hierarchy "AU:Arithmetic_Unit" File: C:/Users/serva/OneDrive/Documents/Classes_Spring_2024/ADL/TermProject/TermProject/TermProject.sv Line: 56
+Info (12128): Elaborating entity "NBitRegister" for hierarchy "AU:Arithmetic_Unit|NBitRegister:InputA" File: C:/Users/serva/OneDrive/Documents/Classes_Spring_2024/ADL/TermProject/TermProject/AU.sv Line: 21
+Info (12128): Elaborating entity "NBitRegister" for hierarchy "AU:Arithmetic_Unit|NBitRegister:InputB" File: C:/Users/serva/OneDrive/Documents/Classes_Spring_2024/ADL/TermProject/TermProject/AU.sv Line: 29
+Info (12128): Elaborating entity "GCLA_AddSub" for hierarchy "AU:Arithmetic_Unit|GCLA_AddSub:Add_Sub" File: C:/Users/serva/OneDrive/Documents/Classes_Spring_2024/ADL/TermProject/TermProject/AU.sv Line: 40
+Info (12128): Elaborating entity "FourBit_CLA" for hierarchy "AU:Arithmetic_Unit|GCLA_AddSub:Add_Sub|FourBit_CLA:GCLA4_1stStage" File: C:/Users/serva/OneDrive/Documents/Classes_Spring_2024/ADL/TermProject/Add_Sub/GCLA_AddSub.sv Line: 23
+Warning (10036): Verilog HDL or VHDL warning at FourBit_CLA.sv(24): object "Cout" assigned a value but never read File: C:/Users/serva/OneDrive/Documents/Classes_Spring_2024/ADL/TermProject/Add_Sub/FourBit_CLA.sv Line: 24
+Warning (10230): Verilog HDL assignment warning at FourBit_CLA.sv(26): truncated value with size 5 to match size of target (4) File: C:/Users/serva/OneDrive/Documents/Classes_Spring_2024/ADL/TermProject/Add_Sub/FourBit_CLA.sv Line: 26
+Info (12128): Elaborating entity "Multiplier" for hierarchy "AU:Arithmetic_Unit|Multiplier:Mult" File: C:/Users/serva/OneDrive/Documents/Classes_Spring_2024/ADL/TermProject/TermProject/AU.sv Line: 50
+Warning (10230): Verilog HDL assignment warning at Multiplier.sv(21): truncated value with size 32 to match size of target (3) File: C:/Users/serva/OneDrive/Documents/Classes_Spring_2024/ADL/TermProject/Mul/Multiplier.sv Line: 21
+Info (12128): Elaborating entity "MultControl" for hierarchy "AU:Arithmetic_Unit|Multiplier:Mult|MultControl:Ctrl" File: C:/Users/serva/OneDrive/Documents/Classes_Spring_2024/ADL/TermProject/Mul/Multiplier.sv Line: 51
+Info (10264): Verilog HDL Case Statement information at MultControl.sv(17): all case item expressions in this case statement are onehot File: C:/Users/serva/OneDrive/Documents/Classes_Spring_2024/ADL/TermProject/Mul/MultControl.sv Line: 17
+Info (12128): Elaborating entity "Divider" for hierarchy "AU:Arithmetic_Unit|Divider:DIVIDE" File: C:/Users/serva/OneDrive/Documents/Classes_Spring_2024/ADL/TermProject/TermProject/AU.sv Line: 70
+Info (12128): Elaborating entity "MUX" for hierarchy "AU:Arithmetic_Unit|Divider:DIVIDE|MUX:Mux1" File: C:/Users/serva/OneDrive/Documents/Classes_Spring_2024/ADL/TermProject/Div/Divider.sv Line: 42
+Info (12128): Elaborating entity "shiftreg" for hierarchy "AU:Arithmetic_Unit|Divider:DIVIDE|shiftreg:Rreg" File: C:/Users/serva/OneDrive/Documents/Classes_Spring_2024/ADL/TermProject/Div/Divider.sv Line: 44
+Info (12128): Elaborating entity "shiftreg" for hierarchy "AU:Arithmetic_Unit|Divider:DIVIDE|shiftreg:Qreg" File: C:/Users/serva/OneDrive/Documents/Classes_Spring_2024/ADL/TermProject/Div/Divider.sv Line: 45
+Info (12128): Elaborating entity "alu" for hierarchy "AU:Arithmetic_Unit|Divider:DIVIDE|alu:AdSb" File: C:/Users/serva/OneDrive/Documents/Classes_Spring_2024/ADL/TermProject/Div/Divider.sv Line: 48
+Info (12128): Elaborating entity "D_Control" for hierarchy "AU:Arithmetic_Unit|Divider:DIVIDE|D_Control:DivCtrl" File: C:/Users/serva/OneDrive/Documents/Classes_Spring_2024/ADL/TermProject/Div/Divider.sv Line: 50
+Warning (10230): Verilog HDL assignment warning at D_Control.sv(51): truncated value with size 32 to match size of target (3) File: C:/Users/serva/OneDrive/Documents/Classes_Spring_2024/ADL/TermProject/Div/D_Control.sv Line: 51
+Info (12128): Elaborating entity "NBitRegister" for hierarchy "AU:Arithmetic_Unit|NBitRegister:QUOTIENT" File: C:/Users/serva/OneDrive/Documents/Classes_Spring_2024/ADL/TermProject/TermProject/AU.sv Line: 78
+Info (12128): Elaborating entity "M_U_X" for hierarchy "AU:Arithmetic_Unit|M_U_X:MUX" File: C:/Users/serva/OneDrive/Documents/Classes_Spring_2024/ADL/TermProject/TermProject/AU.sv Line: 98
+Info (12128): Elaborating entity "Controller" for hierarchy "Controller:Output_Unit" File: C:/Users/serva/OneDrive/Documents/Classes_Spring_2024/ADL/TermProject/TermProject/TermProject.sv Line: 71
+Info (12128): Elaborating entity "four2one" for hierarchy "Controller:Output_Unit|four2one:decoder" File: C:/Users/serva/OneDrive/Documents/Classes_Spring_2024/ADL/TermProject/TermProject/Controller.sv Line: 27
+Info (12128): Elaborating entity "FSM" for hierarchy "Controller:Output_Unit|FSM:digit" File: C:/Users/serva/OneDrive/Documents/Classes_Spring_2024/ADL/TermProject/TermProject/Controller.sv Line: 35
+Info (12128): Elaborating entity "binary2seven" for hierarchy "Controller:Output_Unit|binary2seven:Hex" File: C:/Users/serva/OneDrive/Documents/Classes_Spring_2024/ADL/TermProject/TermProject/Controller.sv Line: 43
+Warning (19016): Clock multiplexers are found and protected
+    Warning (19017): Found clock multiplexer keypad_input:Input_Unit|keypad_base:keypad_base|keypad_decoder:keypad_key_decoder|WideOr4~0 File: C:/Users/serva/OneDrive/Documents/Classes_Spring_2024/ADL/TermProject/TermProject/keypad_decoder.sv Line: 39
+Warning (12241): 8 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Info (13000): Registers with preset signals will power-up high File: C:/Users/serva/OneDrive/Documents/Classes_Spring_2024/ADL/TermProject/Mul/MultControl.sv Line: 17
+Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
+Info (286030): Timing-Driven Synthesis is running
+Info (17049): 34 registers lost all their fanouts during netlist optimizations.
+Info (144001): Generated suppressed messages file C:/Users/serva/OneDrive/Documents/Classes_Spring_2024/ADL/TermProject/TermProject/output_files/TermProject.map.smsg
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 571 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 11 input pins
+    Info (21059): Implemented 17 output pins
+    Info (21061): Implemented 543 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 11 warnings
+    Info: Peak virtual memory: 4844 megabytes
+    Info: Processing ended: Sat Apr 27 16:01:14 2024
+    Info: Elapsed time: 00:00:09
+    Info: Total CPU time (on all processors): 00:00:10
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in C:/Users/serva/OneDrive/Documents/Classes_Spring_2024/ADL/TermProject/TermProject/output_files/TermProject.map.smsg.
+
+

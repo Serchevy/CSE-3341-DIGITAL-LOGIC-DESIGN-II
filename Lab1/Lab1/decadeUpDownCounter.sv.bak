@@ -1,0 +1,10 @@
+module decadeUpDownCounter
+(
+	input CLK, CLEAR, UP,
+	output logic [3:0] COUNT
+);
+
+	
+
+
+endmodule 

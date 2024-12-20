@@ -1,0 +1,221 @@
+------------------------------------------------------------
+Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'StateMachine:A_B_Q_R_Display|state[0]'
+Slack : -4.360
+TNS   : -85.121
+
+Type  : Slow 1200mV 85C Model Setup 'CLK'
+Slack : -3.619
+TNS   : -96.897
+
+Type  : Slow 1200mV 85C Model Setup 'Divider:DIVIDE|D_Control:DivCtrl|State.Ends'
+Slack : -0.921
+TNS   : -13.740
+
+Type  : Slow 1200mV 85C Model Setup 'LOAD_NEXT'
+Slack : -0.823
+TNS   : -2.466
+
+Type  : Slow 1200mV 85C Model Setup 'Controller:Mux|clk_ladder:clock|ladder[17]'
+Slack : 0.133
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'CLK'
+Slack : 0.347
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'Controller:Mux|clk_ladder:clock|ladder[17]'
+Slack : 0.348
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'StateMachine:A_B_Q_R_Display|state[0]'
+Slack : 0.945
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'Divider:DIVIDE|D_Control:DivCtrl|State.Ends'
+Slack : 1.042
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'LOAD_NEXT'
+Slack : 1.325
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'CLK'
+Slack : -3.000
+TNS   : -81.568
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'LOAD_NEXT'
+Slack : -3.000
+TNS   : -7.209
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'Divider:DIVIDE|D_Control:DivCtrl|State.Ends'
+Slack : -1.403
+TNS   : -22.448
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'StateMachine:A_B_Q_R_Display|ins[0]'
+Slack : -1.403
+TNS   : -11.224
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'StateMachine:A_B_Q_R_Display|ins[1]'
+Slack : -1.403
+TNS   : -11.224
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'StateMachine:A_B_Q_R_Display|ins[2]'
+Slack : -1.403
+TNS   : -11.224
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'Controller:Mux|clk_ladder:clock|ladder[17]'
+Slack : -1.403
+TNS   : -2.806
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'StateMachine:A_B_Q_R_Display|state[0]'
+Slack : 0.390
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Setup 'StateMachine:A_B_Q_R_Display|state[0]'
+Slack : -4.098
+TNS   : -80.490
+
+Type  : Slow 1200mV 0C Model Setup 'CLK'
+Slack : -3.205
+TNS   : -84.489
+
+Type  : Slow 1200mV 0C Model Setup 'Divider:DIVIDE|D_Control:DivCtrl|State.Ends'
+Slack : -0.774
+TNS   : -11.477
+
+Type  : Slow 1200mV 0C Model Setup 'LOAD_NEXT'
+Slack : -0.621
+TNS   : -1.859
+
+Type  : Slow 1200mV 0C Model Setup 'Controller:Mux|clk_ladder:clock|ladder[17]'
+Slack : 0.203
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'CLK'
+Slack : 0.311
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'Controller:Mux|clk_ladder:clock|ladder[17]'
+Slack : 0.311
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'StateMachine:A_B_Q_R_Display|state[0]'
+Slack : 0.882
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'Divider:DIVIDE|D_Control:DivCtrl|State.Ends'
+Slack : 0.966
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'LOAD_NEXT'
+Slack : 1.161
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'CLK'
+Slack : -3.000
+TNS   : -81.568
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'LOAD_NEXT'
+Slack : -3.000
+TNS   : -7.209
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'Divider:DIVIDE|D_Control:DivCtrl|State.Ends'
+Slack : -1.403
+TNS   : -22.448
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'StateMachine:A_B_Q_R_Display|ins[0]'
+Slack : -1.403
+TNS   : -11.224
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'StateMachine:A_B_Q_R_Display|ins[1]'
+Slack : -1.403
+TNS   : -11.224
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'StateMachine:A_B_Q_R_Display|ins[2]'
+Slack : -1.403
+TNS   : -11.224
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'Controller:Mux|clk_ladder:clock|ladder[17]'
+Slack : -1.403
+TNS   : -2.806
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'StateMachine:A_B_Q_R_Display|state[0]'
+Slack : 0.348
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'StateMachine:A_B_Q_R_Display|state[0]'
+Slack : -1.742
+TNS   : -33.627
+
+Type  : Fast 1200mV 0C Model Setup 'CLK'
+Slack : -0.896
+TNS   : -14.785
+
+Type  : Fast 1200mV 0C Model Setup 'LOAD_NEXT'
+Slack : -0.032
+TNS   : -0.093
+
+Type  : Fast 1200mV 0C Model Setup 'Divider:DIVIDE|D_Control:DivCtrl|State.Ends'
+Slack : 0.079
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'Controller:Mux|clk_ladder:clock|ladder[17]'
+Slack : 0.628
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'CLK'
+Slack : 0.150
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'Controller:Mux|clk_ladder:clock|ladder[17]'
+Slack : 0.151
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'StateMachine:A_B_Q_R_Display|state[0]'
+Slack : 0.296
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'Divider:DIVIDE|D_Control:DivCtrl|State.Ends'
+Slack : 0.433
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'LOAD_NEXT'
+Slack : 0.771
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'CLK'
+Slack : -3.000
+TNS   : -61.267
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'LOAD_NEXT'
+Slack : -3.000
+TNS   : -6.252
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'Divider:DIVIDE|D_Control:DivCtrl|State.Ends'
+Slack : -1.000
+TNS   : -16.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'StateMachine:A_B_Q_R_Display|ins[0]'
+Slack : -1.000
+TNS   : -8.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'StateMachine:A_B_Q_R_Display|ins[1]'
+Slack : -1.000
+TNS   : -8.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'StateMachine:A_B_Q_R_Display|ins[2]'
+Slack : -1.000
+TNS   : -8.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'Controller:Mux|clk_ladder:clock|ladder[17]'
+Slack : -1.000
+TNS   : -2.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'StateMachine:A_B_Q_R_Display|state[0]'
+Slack : 0.447
+TNS   : 0.000
+
+------------------------------------------------------------

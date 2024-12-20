@@ -1,0 +1,10 @@
+module four2one 
+(
+	input A, B,
+	input [3:0] D0, D1, D2, D3,
+	output logic [3:0] OUTPUT
+);
+	
+	
+	
+endmodule 

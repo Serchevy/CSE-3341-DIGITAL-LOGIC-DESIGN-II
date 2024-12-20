@@ -1,0 +1,18 @@
+module Signed 
+(
+	input CLK,
+	input [7:0] B, 
+	input [15:0] A, 
+	input [3:0] Q, R, 
+	output logic [7:0] B_s, 
+	output logic [15:0] A_s, 
+	output logic [3:0] Q_s, R_s
+);
+	
+	always_ff @(negedge CLK) begin
+		if(A[15] == 1) A_s <= ~A + 1'b1;
+		if(B[7] == 1) B_s <= ~B + 1b'1;
+		if(A[15] ^ B[7]) Q <= ~Q + 1b'1;
+	end
+
+endmodule 

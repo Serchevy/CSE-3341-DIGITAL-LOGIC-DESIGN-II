@@ -1,0 +1,13 @@
+module reverseLogic 
+(	
+	input [31-0] COUNT,
+	output OUT
+);
+	
+	logic state 1'b1;
+	
+	always @ (COUNT)
+		if(COUNT == 5000000 - 1'd1) state <= ~state;
+	assign OUT = state;
+			
+endmodule 

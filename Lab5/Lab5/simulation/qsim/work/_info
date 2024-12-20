@@ -1,0 +1,130 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/serva/OneDrive/Documents/Classes_Spring_2024/ADL/Lab5/Lab5/simulation/qsim
+vDivider
+Z1 !s110 1712028399
+!i10b 1
+!s100 kSE?5QCgci5i1a@Qz<9H42
+Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
+IIP6KAOS]llaFla>gI6BH>2
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+R0
+Z4 w1712028399
+Z5 8Lab5.vo
+Z6 FLab5.vo
+!i122 50
+L0 32 2553
+Z7 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z8 !s108 1712028399.000000
+Z9 !s107 Lab5.vo|
+Z10 !s90 -work|work|Lab5.vo|
+!i113 1
+Z11 o-work work
+Z12 tCvgOpt 0
+n@divider
+vDivider_vlg_vec_tst
+!s110 1712028400
+!i10b 1
+!s100 Oofl6:D2Be_ZlXW:M6Iz?0
+R2
+IG?BCIS]35801W3Ad=;>?`3
+R3
+R0
+w1712028398
+Z13 8Waveform.vwf.vt
+Z14 FWaveform.vwf.vt
+!i122 51
+L0 30 208
+R7
+r1
+!s85 0
+31
+!s108 1712028400.000000
+Z15 !s107 Waveform.vwf.vt|
+Z16 !s90 -work|work|Waveform.vwf.vt|
+!i113 1
+R11
+R12
+n@divider_vlg_vec_tst
+vhard_block
+R1
+!i10b 1
+!s100 XMKkc;YLcXaTD>VM5l9f63
+R2
+I^_7[T3DGCPWU;h^;BjdG?0
+R3
+R0
+R4
+R5
+R6
+!i122 50
+L0 2586 45
+R7
+r1
+!s85 0
+31
+R8
+R9
+R10
+!i113 1
+R11
+R12
+vLab5
+Z17 !s110 1712027689
+!i10b 1
+!s100 mF?]SEAlz[Y]JLPBbdH<A3
+R2
+IQUdfnO2iCBFb5Zk]a`j:z3
+R3
+R0
+w1712027688
+R5
+R6
+!i122 46
+L0 32 6147
+R7
+r1
+!s85 0
+31
+Z18 !s108 1712027689.000000
+R9
+R10
+!i113 1
+R11
+R12
+n@lab5
+vLab5_vlg_vec_tst
+R17
+!i10b 1
+!s100 DSbD[zD[_gKm_mzPel8gA1
+R2
+IVN@Q:@jYceom>`J3[Gaa`3
+R3
+R0
+w1712027687
+R13
+R14
+!i122 47
+L0 30 54
+R7
+r1
+!s85 0
+31
+R18
+R15
+R16
+!i113 1
+R11
+R12
+n@lab5_vlg_vec_tst

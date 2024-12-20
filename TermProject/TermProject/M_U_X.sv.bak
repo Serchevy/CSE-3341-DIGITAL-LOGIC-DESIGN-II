@@ -1,0 +1,16 @@
+module M_U_X 
+(
+	input [3:0] OP,
+	input logic [15:0] AddSub_R, Mul_R, Div_R;
+	output [15:0] Rout
+);
+	
+	always_comb begin 
+		if(OP[0] == 1'b1) Rout = AddSub_R;
+		if(OP[1] == 1'b1) Rout = AddSub_R;
+		if(OP[2] == 1'b1) Rout = Mul_R;
+		if(OP[3] == 1'b1) Rout = Div_R;
+	end
+
+
+endmodule 

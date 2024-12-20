@@ -1,0 +1,112 @@
+# -------------------------------------------------------------------------- #
+#
+# Copyright (C) 2020  Intel Corporation. All rights reserved.
+# Your use of Intel Corporation's design tools, logic functions 
+# and other software and tools, and any partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Intel Program License 
+# Subscription Agreement, the Intel Quartus Prime License Agreement,
+# the Intel FPGA IP License Agreement, or other applicable license
+# agreement, including, without limitation, that your use is for
+# the sole purpose of programming logic devices manufactured by
+# Intel and sold by Intel or its authorized distributors.  Please
+# refer to the applicable agreement for further details, at
+# https://fpgasoftware.intel.com/eula.
+#
+# -------------------------------------------------------------------------- #
+#
+# Quartus Prime
+# Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+# Date created = 23:51:42  April 19, 2024
+#
+# -------------------------------------------------------------------------- #
+#
+# Notes:
+#
+# 1) The default values for assignments are stored in the file:
+#		TermProject_assignment_defaults.qdf
+#    If this file doesn't exist, see file:
+#		assignment_defaults.qdf
+#
+# 2) Altera recommends that you do not modify this file. This
+#    file is updated automatically by the Quartus Prime software
+#    and any changes you make may be lost or overwritten.
+#
+# -------------------------------------------------------------------------- #
+
+
+set_global_assignment -name FAMILY "MAX 10"
+set_global_assignment -name DEVICE 10M50DAF484C7G
+set_global_assignment -name TOP_LEVEL_ENTITY TermProject
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION 20.1.1
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "23:51:42  APRIL 19, 2024"
+set_global_assignment -name LAST_QUARTUS_VERSION "20.1.1 Lite Edition"
+set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
+set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
+set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
+set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 256
+set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
+set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_location_assignment PIN_B8 -to CLR
+set_location_assignment PIN_W8 -to CAT[0]
+set_location_assignment PIN_V8 -to CAT[1]
+set_location_assignment PIN_W9 -to CAT[2]
+set_location_assignment PIN_V9 -to CAT[3]
+set_location_assignment PIN_AA12 -to COL[0]
+set_location_assignment PIN_AA11 -to COL[1]
+set_location_assignment PIN_Y10 -to COL[2]
+set_location_assignment PIN_AB9 -to COL[3]
+set_location_assignment PIN_AA6 -to HEX[0]
+set_location_assignment PIN_Y5 -to HEX[1]
+set_location_assignment PIN_AA5 -to HEX[2]
+set_location_assignment PIN_Y4 -to HEX[3]
+set_location_assignment PIN_AB3 -to HEX[4]
+set_location_assignment PIN_Y3 -to HEX[5]
+set_location_assignment PIN_W7 -to HEX[6]
+set_location_assignment PIN_AB8 -to ROW[0]
+set_location_assignment PIN_AB7 -to ROW[1]
+set_location_assignment PIN_AB6 -to ROW[2]
+set_location_assignment PIN_AB5 -to ROW[3]
+set_location_assignment PIN_P11 -to CLK
+set_location_assignment PIN_A7 -to Enter
+set_location_assignment PIN_AA2 -to Sub
+set_location_assignment PIN_V10 -to Mul
+set_location_assignment PIN_W10 -to Div
+set_location_assignment PIN_AB2 -to Add
+set_global_assignment -name SYSTEMVERILOG_FILE ../Div/shiftreg.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../Div/MUX.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../Div/Divider.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../Div/D_Control.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../Div/alu.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../Mul/Multiplier.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../Mul/MultControl.sv
+set_global_assignment -name SYSTEMVERILOG_FILE EdgeDetect.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../Add_Sub/GCLA_AddSub.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../Add_Sub/FourBit_CLA.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../Add_Sub/ConditionCode.sv
+set_global_assignment -name SYSTEMVERILOG_FILE NBitRegister.sv
+set_global_assignment -name SYSTEMVERILOG_FILE twoSIGN.sv
+set_global_assignment -name SYSTEMVERILOG_FILE shift_reg.sv
+set_global_assignment -name SYSTEMVERILOG_FILE keypad_input.sv
+set_global_assignment -name SYSTEMVERILOG_FILE keypad_fsm.sv
+set_global_assignment -name SYSTEMVERILOG_FILE keypad_decoder.sv
+set_global_assignment -name SYSTEMVERILOG_FILE keypad_base.sv
+set_global_assignment -name SYSTEMVERILOG_FILE halfADDER.sv
+set_global_assignment -name SYSTEMVERILOG_FILE FSM.sv
+set_global_assignment -name SYSTEMVERILOG_FILE four2one.sv
+set_global_assignment -name SYSTEMVERILOG_FILE Controller.sv
+set_global_assignment -name SYSTEMVERILOG_FILE clock_div.sv
+set_global_assignment -name SYSTEMVERILOG_FILE clk_ladder.sv
+set_global_assignment -name SYSTEMVERILOG_FILE binary2seven.sv
+set_global_assignment -name SYSTEMVERILOG_FILE TermProject.sv
+set_global_assignment -name SYSTEMVERILOG_FILE CU.sv
+set_global_assignment -name SYSTEMVERILOG_FILE AU.sv
+set_global_assignment -name SYSTEMVERILOG_FILE M_U_X.sv
+set_location_assignment PIN_A11 -to ZERO
+set_location_assignment PIN_B11 -to OVR
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

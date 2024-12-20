@@ -1,0 +1,32 @@
+module IU 
+(
+	input 
+
+);
+	
+	logic [15:0] keyPad;
+	
+	keypad_input INPUT
+	( 
+		.clk(CLK),
+		.reset(CLR),
+		.row(ROW),
+		.col(COL),
+		.out(keyPad)
+	);
+	
+	NBitRegister #(16) InputA 
+	(
+		.D(keyPad),									
+		.CLK(LdA), 
+		.CLR(CLR), 									
+		.Q(A) 					
+	);
+	
+	NBitRegister #(16) InputB 
+	(
+		.D(keyPad),									
+		.CLK(LdB), 
+		.CLR(CLR), 									
+		.Q(B)						
+	);

@@ -1,0 +1,2 @@
+Info (10281): Verilog HDL Declaration information at MUX.sv(7): object "HEX" differs only in case from object "Hex" in the same scope File: C:/Users/serva/OneDrive/Documents/Classes_Spring_2024/ADL/LAB2/lab2_partB/MUX.sv Line: 7
+Warning (10268): Verilog HDL information at CrawlNumbs.sv(11): always construct contains both blocking and non-blocking assignments File: C:/Users/serva/OneDrive/Documents/Classes_Spring_2024/ADL/LAB2/lab2_partB/CrawlNumbs.sv Line: 11

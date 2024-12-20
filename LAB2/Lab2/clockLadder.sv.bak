@@ -1,0 +1,11 @@
+module clockLadder 
+(
+	input CLEAR, CLK, 
+	output logic clk190, clk25, clk3, clk1
+);
+
+
+	
+	
+
+endmodule 

@@ -1,0 +1,149 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "Rout[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Rout[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Rout[2]",
+					"strict" : false
+				},
+				{
+					"name" : "Rout[3]",
+					"strict" : false
+				},
+				{
+					"name" : "Rout[4]",
+					"strict" : false
+				},
+				{
+					"name" : "Rout[5]",
+					"strict" : false
+				},
+				{
+					"name" : "Rout[6]",
+					"strict" : false
+				},
+				{
+					"name" : "Rout[7]",
+					"strict" : false
+				},
+				{
+					"name" : "CCout[0]",
+					"strict" : false
+				},
+				{
+					"name" : "CCout[1]",
+					"strict" : false
+				},
+				{
+					"name" : "CCout[2]",
+					"strict" : false
+				},
+				{
+					"name" : "CCout[3]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX[6]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX[5]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX[4]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX[3]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX[2]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX[1]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX[0]",
+					"strict" : false
+				},
+				{
+					"name" : "CAT[2]",
+					"strict" : false
+				},
+				{
+					"name" : "CAT[3]",
+					"strict" : false
+				},
+				{
+					"name" : "Out",
+					"strict" : false
+				},
+				{
+					"name" : "CLEAR",
+					"strict" : false
+				},
+				{
+					"name" : "Add_Sub",
+					"strict" : false
+				},
+				{
+					"name" : "X[0]",
+					"strict" : false
+				},
+				{
+					"name" : "inA",
+					"strict" : false
+				},
+				{
+					"name" : "inB",
+					"strict" : false
+				},
+				{
+					"name" : "X[1]",
+					"strict" : false
+				},
+				{
+					"name" : "X[2]",
+					"strict" : false
+				},
+				{
+					"name" : "X[3]",
+					"strict" : false
+				},
+				{
+					"name" : "X[4]",
+					"strict" : false
+				},
+				{
+					"name" : "X[5]",
+					"strict" : false
+				},
+				{
+					"name" : "X[6]",
+					"strict" : false
+				},
+				{
+					"name" : "X[7]",
+					"strict" : false
+				},
+				{
+					"name" : "CLK",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

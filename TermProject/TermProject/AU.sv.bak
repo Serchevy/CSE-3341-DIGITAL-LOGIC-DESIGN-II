@@ -1,0 +1,28 @@
+module AU 
+(
+
+
+
+
+);
+
+
+	NBitRegister #(16) InputA 
+	(
+		.D(keyPad),									
+		.CLK(LdA), 
+		.CLR(CLR), 									
+		.Q(A) 					
+	);
+	
+	NBitRegister #(16) InputB 
+	(
+		.D(keyPad),									
+		.CLK(LdB), 
+		.CLR(CLR), 									
+		.Q(B)						
+	);
+
+
+
+endmodule 

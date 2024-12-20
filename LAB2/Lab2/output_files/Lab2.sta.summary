@@ -1,0 +1,113 @@
+------------------------------------------------------------
+Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'CLK'
+Slack : -3.688
+TNS   : -490.259
+
+Type  : Slow 1200mV 85C Model Setup 'clockLadder:Ladder|divideXN:clock1|OUT'
+Slack : -1.653
+TNS   : -17.490
+
+Type  : Slow 1200mV 85C Model Setup 'ON_OFF'
+Slack : 0.298
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'clockLadder:Ladder|divideXN:clock1|OUT'
+Slack : 0.338
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'CLK'
+Slack : 0.362
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'ON_OFF'
+Slack : 0.393
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'CLK'
+Slack : -3.000
+TNS   : -234.495
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'ON_OFF'
+Slack : -3.000
+TNS   : -4.403
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clockLadder:Ladder|divideXN:clock1|OUT'
+Slack : -1.403
+TNS   : -25.254
+
+Type  : Slow 1200mV 0C Model Setup 'CLK'
+Slack : -3.224
+TNS   : -435.515
+
+Type  : Slow 1200mV 0C Model Setup 'clockLadder:Ladder|divideXN:clock1|OUT'
+Slack : -1.387
+TNS   : -14.280
+
+Type  : Slow 1200mV 0C Model Setup 'ON_OFF'
+Slack : 0.361
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'clockLadder:Ladder|divideXN:clock1|OUT'
+Slack : 0.305
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'CLK'
+Slack : 0.327
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'ON_OFF'
+Slack : 0.354
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'CLK'
+Slack : -3.000
+TNS   : -234.503
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'ON_OFF'
+Slack : -3.000
+TNS   : -4.403
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clockLadder:Ladder|divideXN:clock1|OUT'
+Slack : -1.403
+TNS   : -25.254
+
+Type  : Fast 1200mV 0C Model Setup 'CLK'
+Slack : -1.050
+TNS   : -113.395
+
+Type  : Fast 1200mV 0C Model Setup 'clockLadder:Ladder|divideXN:clock1|OUT'
+Slack : -0.058
+TNS   : -0.070
+
+Type  : Fast 1200mV 0C Model Setup 'ON_OFF'
+Slack : 0.693
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'clockLadder:Ladder|divideXN:clock1|OUT'
+Slack : 0.142
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'CLK'
+Slack : 0.156
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'ON_OFF'
+Slack : 0.169
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'CLK'
+Slack : -3.000
+TNS   : -168.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'ON_OFF'
+Slack : -3.000
+TNS   : -4.101
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clockLadder:Ladder|divideXN:clock1|OUT'
+Slack : -1.000
+TNS   : -18.000
+
+------------------------------------------------------------

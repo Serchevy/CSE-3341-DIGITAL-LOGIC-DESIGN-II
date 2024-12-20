@@ -1,0 +1,13 @@
+
+State Machine - |TermProject|AU:Arithmetic_Unit|Divider:DIVIDE|D_Control:DivCtrl|State
+Name State.Ends State.Restore State.Shifts4 State.Shifts3 State.Shifts2 State.Shifts1 State.Subs State.Subs1 State.Adds State.Inits 
+State.Inits 0 0 0 0 0 0 0 0 0 0 
+State.Adds 0 0 0 0 0 0 0 0 1 1 
+State.Subs1 0 0 0 0 0 0 0 1 0 1 
+State.Subs 0 0 0 0 0 0 1 0 0 1 
+State.Shifts1 0 0 0 0 0 1 0 0 0 1 
+State.Shifts2 0 0 0 0 1 0 0 0 0 1 
+State.Shifts3 0 0 0 1 0 0 0 0 0 1 
+State.Shifts4 0 0 1 0 0 0 0 0 0 1 
+State.Restore 0 1 0 0 0 0 0 0 0 1 
+State.Ends 1 0 0 0 0 0 0 0 0 1 

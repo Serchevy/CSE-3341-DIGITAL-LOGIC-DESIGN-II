@@ -1,0 +1,2 @@
+Info (10281): Verilog HDL Declaration information at keypad_decoder.sv(1): object "BASE" differs only in case from object "base" in the same scope File: C:/Users/serva/OneDrive/Documents/Classes_Spring_2024/ADL/Lab6/Lab6/keypad_decoder.sv Line: 1
+Info (10281): Verilog HDL Declaration information at Controller.sv(7): object "HEX" differs only in case from object "Hex" in the same scope File: C:/Users/serva/OneDrive/Documents/Classes_Spring_2024/ADL/Lab6/Lab6/Controller.sv Line: 7

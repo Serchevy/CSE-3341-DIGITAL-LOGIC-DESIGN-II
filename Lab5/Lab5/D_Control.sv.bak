@@ -1,0 +1,14 @@
+module D_Control 
+(
+	input Clock, //active-high clock
+	input Start, // start pulse
+	input Rsign, // sign from alu op
+	output AddSub, // select add/subtract
+	output Dload, // enable load D register
+	output Rload, // enable load R register
+	output Qload, // enable load Q register
+	output Rshift, // enable R reg shift
+	output Qshift, // enable Q reg shift
+	output DONE, // alorithm done indicator
+	output Qbit //
+);

@@ -1,0 +1,3 @@
+Info (10281): Verilog HDL Declaration information at Lab5_Signed.sv(12): object "Quotient" differs only in case from object "QUOTIENT" in the same scope File: C:/Users/serva/OneDrive/Documents/Classes_Spring_2024/ADL/Lab5/Lab5_EX/Lab5_Signed.sv Line: 12
+Info (10281): Verilog HDL Declaration information at Lab5_Signed.sv(13): object "Remainder" differs only in case from object "REMAINDER" in the same scope File: C:/Users/serva/OneDrive/Documents/Classes_Spring_2024/ADL/Lab5/Lab5_EX/Lab5_Signed.sv Line: 13
+Info (10281): Verilog HDL Declaration information at Controller.sv(7): object "HEX" differs only in case from object "Hex" in the same scope File: C:/Users/serva/OneDrive/Documents/Classes_Spring_2024/ADL/Lab5/Lab5_EX/Controller.sv Line: 7

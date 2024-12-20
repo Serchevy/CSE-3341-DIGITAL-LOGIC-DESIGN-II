@@ -1,0 +1,27 @@
+module speedMode 
+(
+	input CLK, CLEAR, X,
+	output logic [31:0] speed
+);
+	reg [1:0] state, nextstate;
+	
+	parameter N_1 = 5000000;
+	parameter N_2 = 5000000;
+	parameter N_3 = 5000000;
+
+	parameter s1 = 2'b00, s2 = 2'b01, s3 = 2'b11;
+	
+	always @ (negedge CLK, negedge CLEAR)
+		if(CLEAR == 1'b0) state <= s1;
+		else state <= nextstate;
+		
+	always @ (MODE, state) 
+		case(state)
+			s1: if(~X) begin nexstate s1; assign speed = N_1; end 
+				else begin nexstate s2; assign speed = N_2; end
+			s2: if(~X) begin nexstate s2; assign speed = N_2; end 
+				else begin nexstate s3; assign speed = N_3; end
+			s3: if(~X) begin nexstate s3; assign speed = N_3; end 
+				else begin nexstate s1; assign speed = N_1; end
+		endcase 
+endmodule 

@@ -1,0 +1,517 @@
+Analysis & Synthesis report for Lab2
+Tue Feb 13 18:44:20 2024
+Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. General Register Statistics
+  9. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 10. Parameter Settings for User Entity Instance: OnOffToggle:toggle
+ 11. Parameter Settings for User Entity Instance: clockLadder:Ladder|divideXN:clock190
+ 12. Parameter Settings for User Entity Instance: clockLadder:Ladder|divideXN:clock25
+ 13. Parameter Settings for User Entity Instance: clockLadder:Ladder|divideXN:clock3
+ 14. Parameter Settings for User Entity Instance: clockLadder:Ladder|divideXN:clock1
+ 15. Parameter Settings for User Entity Instance: clockLadder:Ladder|divideXN:slowest
+ 16. Port Connectivity Checks: "MUX:Mux_decoder|binary2seven:Hex"
+ 17. Port Connectivity Checks: "MUX:Mux_decoder"
+ 18. Port Connectivity Checks: "clockLadder:Ladder|divideXN:slowest"
+ 19. Port Connectivity Checks: "clockLadder:Ladder|divideXN:clock1"
+ 20. Port Connectivity Checks: "clockLadder:Ladder|divideXN:clock3"
+ 21. Port Connectivity Checks: "clockLadder:Ladder|divideXN:clock25"
+ 22. Port Connectivity Checks: "clockLadder:Ladder|divideXN:clock190"
+ 23. Post-Synthesis Netlist Statistics for Top Partition
+ 24. Elapsed Time Per Partition
+ 25. Analysis & Synthesis Messages
+ 26. Analysis & Synthesis Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2020  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                     ;
++------------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Tue Feb 13 18:44:20 2024       ;
+; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
+; Revision Name                      ; Lab2                                        ;
+; Top-level Entity Name              ; Lab2                                        ;
+; Family                             ; MAX 10                                      ;
+; Total logic elements               ; 425                                         ;
+;     Total combinational functions  ; 425                                         ;
+;     Dedicated logic registers      ; 184                                         ;
+; Total registers                    ; 184                                         ;
+; Total pins                         ; 18                                          ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 0                                           ;
+; Embedded Multiplier 9-bit elements ; 0                                           ;
+; Total PLLs                         ; 0                                           ;
+; UFM blocks                         ; 0                                           ;
+; ADC blocks                         ; 0                                           ;
++------------------------------------+---------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                              ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                           ; Setting            ; Default Value      ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                           ; 10M50DAF484C7G     ;                    ;
+; Top-level entity name                                            ; Lab2               ; Lab2               ;
+; Family name                                                      ; MAX 10             ; Cyclone V          ;
+; Use smart compilation                                            ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                      ; Off                ; Off                ;
+; Restructure Multiplexers                                         ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                              ; Off                ; Off                ;
+; Preserve fewer node names                                        ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                    ; Enable             ; Enable             ;
+; Verilog Version                                                  ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                     ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                         ; Auto               ; Auto               ;
+; Safe State Machine                                               ; Off                ; Off                ;
+; Extract Verilog State Machines                                   ; On                 ; On                 ;
+; Extract VHDL State Machines                                      ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                       ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                   ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                          ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                        ; On                 ; On                 ;
+; Parallel Synthesis                                               ; On                 ; On                 ;
+; DSP Block Balancing                                              ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                               ; On                 ; On                 ;
+; Power-Up Don't Care                                              ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                     ; Off                ; Off                ;
+; Remove Duplicate Registers                                       ; On                 ; On                 ;
+; Ignore CARRY Buffers                                             ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                           ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                            ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                        ; Off                ; Off                ;
+; Ignore LCELL Buffers                                             ; Off                ; Off                ;
+; Ignore SOFT Buffers                                              ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                   ; Off                ; Off                ;
+; Optimization Technique                                           ; Balanced           ; Balanced           ;
+; Carry Chain Length                                               ; 70                 ; 70                 ;
+; Auto Carry Chains                                                ; On                 ; On                 ;
+; Auto Open-Drain Pins                                             ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                            ; Off                ; Off                ;
+; Auto ROM Replacement                                             ; On                 ; On                 ;
+; Auto RAM Replacement                                             ; On                 ; On                 ;
+; Auto DSP Block Replacement                                       ; On                 ; On                 ;
+; Auto Shift Register Replacement                                  ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                  ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                    ; On                 ; On                 ;
+; Strict RAM Replacement                                           ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                           ; Off                ; Off                ;
+; Auto RAM Block Balancing                                         ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                ; Off                ; Off                ;
+; Auto Resource Sharing                                            ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                    ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing              ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                ; Off                ; Off                ;
+; Timing-Driven Synthesis                                          ; On                 ; On                 ;
+; Report Parameter Settings                                        ; On                 ; On                 ;
+; Report Source Assignments                                        ; On                 ; On                 ;
+; Report Connectivity Checks                                       ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                               ; Off                ; Off                ;
+; Synchronization Register Chain Length                            ; 2                  ; 2                  ;
+; Power Optimization During Synthesis                              ; Normal compilation ; Normal compilation ;
+; HDL message level                                                ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                  ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report         ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report               ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report        ; 100                ; 100                ;
+; Clock MUX Protection                                             ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                      ; Off                ; Off                ;
+; Block Design Naming                                              ; Auto               ; Auto               ;
+; SDC constraint protection                                        ; Off                ; Off                ;
+; Synthesis Effort                                                 ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal     ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                             ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                               ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                      ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                           ; On                 ; On                 ;
++------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 16          ;
+; Maximum allowed            ; 16          ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 16          ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processors 2-16        ;   0.0%      ;
++----------------------------+-------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                        ;
++----------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                                    ; Library ;
++----------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------------------------------+---------+
+; Lab2.sv                          ; yes             ; User SystemVerilog HDL File  ; C:/Users/serva/OneDrive/Documents/Classes_Spring_2024/ADL/LAB2/Lab2/Lab2.sv                     ;         ;
+; binary2seven.sv                  ; yes             ; User SystemVerilog HDL File  ; C:/Users/serva/OneDrive/Documents/Classes_Spring_2024/ADL/LAB2/Lab2/binary2seven.sv             ;         ;
+; binaryCounter16Bit.sv            ; yes             ; User SystemVerilog HDL File  ; C:/Users/serva/OneDrive/Documents/Classes_Spring_2024/ADL/LAB2/Lab2/binaryCounter16Bit.sv       ;         ;
+; divideXN.sv                      ; yes             ; User SystemVerilog HDL File  ; C:/Users/serva/OneDrive/Documents/Classes_Spring_2024/ADL/LAB2/Lab2/divideXN.sv                 ;         ;
+; FSM.sv                           ; yes             ; User SystemVerilog HDL File  ; C:/Users/serva/OneDrive/Documents/Classes_Spring_2024/ADL/LAB2/Lab2/FSM.sv                      ;         ;
+; clockLadder.sv                   ; yes             ; User SystemVerilog HDL File  ; C:/Users/serva/OneDrive/Documents/Classes_Spring_2024/ADL/LAB2/Lab2/clockLadder.sv              ;         ;
+; four2one.sv                      ; yes             ; User SystemVerilog HDL File  ; C:/Users/serva/OneDrive/Documents/Classes_Spring_2024/ADL/LAB2/Lab2/four2one.sv                 ;         ;
+; speeds.sv                        ; yes             ; User SystemVerilog HDL File  ; C:/Users/serva/OneDrive/Documents/Classes_Spring_2024/ADL/LAB2/Lab2/speeds.sv                   ;         ;
+; output_files/OnOffToggle.sv      ; yes             ; User SystemVerilog HDL File  ; C:/Users/serva/OneDrive/Documents/Classes_Spring_2024/ADL/LAB2/Lab2/output_files/OnOffToggle.sv ;         ;
+; MUX.sv                           ; yes             ; User SystemVerilog HDL File  ; C:/Users/serva/OneDrive/Documents/Classes_Spring_2024/ADL/LAB2/Lab2/MUX.sv                      ;         ;
++----------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------------------------------+---------+
+
+
++-----------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary               ;
++---------------------------------------------+-------------+
+; Resource                                    ; Usage       ;
++---------------------------------------------+-------------+
+; Estimated Total logic elements              ; 425         ;
+;                                             ;             ;
+; Total combinational functions               ; 425         ;
+; Logic element usage by number of LUT inputs ;             ;
+;     -- 4 input functions                    ; 94          ;
+;     -- 3 input functions                    ; 69          ;
+;     -- <=2 input functions                  ; 262         ;
+;                                             ;             ;
+; Logic elements by mode                      ;             ;
+;     -- normal mode                          ; 256         ;
+;     -- arithmetic mode                      ; 169         ;
+;                                             ;             ;
+; Total registers                             ; 184         ;
+;     -- Dedicated logic registers            ; 184         ;
+;     -- I/O registers                        ; 0           ;
+;                                             ;             ;
+; I/O pins                                    ; 18          ;
+;                                             ;             ;
+; Embedded Multiplier 9-bit elements          ; 0           ;
+;                                             ;             ;
+; Maximum fan-out node                        ; CLEAR~input ;
+; Maximum fan-out                             ; 183         ;
+; Total fan-out                               ; 1678        ;
+; Average fan-out                             ; 2.60        ;
++---------------------------------------------+-------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                 ;
++-------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+--------------------------------------------+--------------------+--------------+
+; Compilation Hierarchy Node    ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                        ; Entity Name        ; Library Name ;
++-------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+--------------------------------------------+--------------------+--------------+
+; |Lab2                         ; 425 (0)             ; 184 (0)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 18   ; 0            ; 0          ; |Lab2                                      ; Lab2               ; work         ;
+;    |MUX:Mux_decoder|          ; 21 (0)              ; 2 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Lab2|MUX:Mux_decoder                      ; MUX                ; work         ;
+;       |FSM:digit|             ; 6 (6)               ; 2 (2)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Lab2|MUX:Mux_decoder|FSM:digit            ; FSM                ; work         ;
+;       |binary2seven:Hex|      ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Lab2|MUX:Mux_decoder|binary2seven:Hex     ; binary2seven       ; work         ;
+;       |four2one:decoder|      ; 8 (8)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Lab2|MUX:Mux_decoder|four2one:decoder     ; four2one           ; work         ;
+;    |OnOffToggle:toggle|       ; 2 (2)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Lab2|OnOffToggle:toggle                   ; OnOffToggle        ; work         ;
+;    |binaryCounter16Bit:Count| ; 16 (16)             ; 16 (16)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Lab2|binaryCounter16Bit:Count             ; binaryCounter16Bit ; work         ;
+;    |clockLadder:Ladder|       ; 376 (0)             ; 165 (0)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Lab2|clockLadder:Ladder                   ; clockLadder        ; work         ;
+;       |divideXN:clock190|     ; 75 (75)             ; 33 (33)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Lab2|clockLadder:Ladder|divideXN:clock190 ; divideXN           ; work         ;
+;       |divideXN:clock1|       ; 75 (75)             ; 33 (33)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Lab2|clockLadder:Ladder|divideXN:clock1   ; divideXN           ; work         ;
+;       |divideXN:clock25|      ; 75 (75)             ; 33 (33)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Lab2|clockLadder:Ladder|divideXN:clock25  ; divideXN           ; work         ;
+;       |divideXN:clock3|       ; 76 (76)             ; 33 (33)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Lab2|clockLadder:Ladder|divideXN:clock3   ; divideXN           ; work         ;
+;       |divideXN:slowest|      ; 75 (75)             ; 33 (33)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Lab2|clockLadder:Ladder|divideXN:slowest  ; divideXN           ; work         ;
+;    |speeds:diffFreq|          ; 10 (10)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Lab2|speeds:diffFreq                      ; speeds             ; work         ;
++-------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+--------------------------------------------+--------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 184   ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 178   ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 5     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                    ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                          ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------+
+; 3:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; Yes        ; |Lab2|clockLadder:Ladder|divideXN:clock1|COUNT[15]  ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; Yes        ; |Lab2|clockLadder:Ladder|divideXN:clock190|COUNT[3] ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; Yes        ; |Lab2|clockLadder:Ladder|divideXN:clock3|COUNT[3]   ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; Yes        ; |Lab2|clockLadder:Ladder|divideXN:clock25|COUNT[27] ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; Yes        ; |Lab2|clockLadder:Ladder|divideXN:slowest|COUNT[17] ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |Lab2|MUX:Mux_decoder|four2one:decoder|Mux3         ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------+
+
+
++-----------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: OnOffToggle:toggle ;
++----------------+-------+----------------------------------------+
+; Parameter Name ; Value ; Type                                   ;
++----------------+-------+----------------------------------------+
+; ON             ; 1     ; Unsigned Binary                        ;
+; OFF            ; 0     ; Unsigned Binary                        ;
++----------------+-------+----------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: clockLadder:Ladder|divideXN:clock190 ;
++----------------+--------+---------------------------------------------------------+
+; Parameter Name ; Value  ; Type                                                    ;
++----------------+--------+---------------------------------------------------------+
+; N              ; 263158 ; Signed Integer                                          ;
+; M              ; 32     ; Signed Integer                                          ;
++----------------+--------+---------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: clockLadder:Ladder|divideXN:clock25 ;
++----------------+---------+-------------------------------------------------------+
+; Parameter Name ; Value   ; Type                                                  ;
++----------------+---------+-------------------------------------------------------+
+; N              ; 2000000 ; Signed Integer                                        ;
+; M              ; 32      ; Signed Integer                                        ;
++----------------+---------+-------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: clockLadder:Ladder|divideXN:clock3 ;
++----------------+----------+-----------------------------------------------------+
+; Parameter Name ; Value    ; Type                                                ;
++----------------+----------+-----------------------------------------------------+
+; N              ; 16666667 ; Signed Integer                                      ;
+; M              ; 32       ; Signed Integer                                      ;
++----------------+----------+-----------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: clockLadder:Ladder|divideXN:clock1 ;
++----------------+----------+-----------------------------------------------------+
+; Parameter Name ; Value    ; Type                                                ;
++----------------+----------+-----------------------------------------------------+
+; N              ; 50000000 ; Signed Integer                                      ;
+; M              ; 32       ; Signed Integer                                      ;
++----------------+----------+-----------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: clockLadder:Ladder|divideXN:slowest ;
++----------------+--------+--------------------------------------------------------+
+; Parameter Name ; Value  ; Type                                                   ;
++----------------+--------+--------------------------------------------------------+
+; N              ; 384616 ; Signed Integer                                         ;
+; M              ; 32     ; Signed Integer                                         ;
++----------------+--------+--------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "MUX:Mux_decoder|binary2seven:Hex"                                                                                                           ;
++------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                                                                                      ;
++------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; MODE ; Input ; Warning  ; Input port expression (1 bits) is smaller than the input port (4 bits) it drives.  Extra input bit(s) "MODE[3..1]" will be connected to GND. ;
++------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "MUX:Mux_decoder"                                                                                                                            ;
++------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                                                                                      ;
++------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; MODE ; Input ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
++------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "clockLadder:Ladder|divideXN:slowest"                                                                      ;
++-------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; Port  ; Type   ; Severity ; Details                                                                                                  ;
++-------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; COUNT ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
++-------+--------+----------+----------------------------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "clockLadder:Ladder|divideXN:clock1"                                                                       ;
++-------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; Port  ; Type   ; Severity ; Details                                                                                                  ;
++-------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; COUNT ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
++-------+--------+----------+----------------------------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "clockLadder:Ladder|divideXN:clock3"                                                                       ;
++-------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; Port  ; Type   ; Severity ; Details                                                                                                  ;
++-------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; COUNT ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
++-------+--------+----------+----------------------------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "clockLadder:Ladder|divideXN:clock25"                                                                      ;
++-------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; Port  ; Type   ; Severity ; Details                                                                                                  ;
++-------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; COUNT ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
++-------+--------+----------+----------------------------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "clockLadder:Ladder|divideXN:clock190"                                                                     ;
++-------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; Port  ; Type   ; Severity ; Details                                                                                                  ;
++-------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; COUNT ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
++-------+--------+----------+----------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 18                          ;
+; cycloneiii_ff         ; 184                         ;
+;     CLR               ; 178                         ;
+;     ENA               ; 5                           ;
+;     plain             ; 1                           ;
+; cycloneiii_lcell_comb ; 432                         ;
+;     arith             ; 169                         ;
+;         2 data inputs ; 168                         ;
+;         3 data inputs ; 1                           ;
+;     normal            ; 263                         ;
+;         1 data inputs ; 16                          ;
+;         2 data inputs ; 85                          ;
+;         3 data inputs ; 68                          ;
+;         4 data inputs ; 94                          ;
+;                       ;                             ;
+; Max LUT depth         ; 5.10                        ;
+; Average LUT depth     ; 4.08                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+    Info: Processing started: Tue Feb 13 18:44:09 2024
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Lab2 -c Lab2
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file lab2.sv
+    Info (12023): Found entity 1: Lab2 File: C:/Users/serva/OneDrive/Documents/Classes_Spring_2024/ADL/LAB2/Lab2/Lab2.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file binary2seven.sv
+    Info (12023): Found entity 1: binary2seven File: C:/Users/serva/OneDrive/Documents/Classes_Spring_2024/ADL/LAB2/Lab2/binary2seven.sv Line: 4
+Info (12021): Found 1 design units, including 1 entities, in source file binarycounter16bit.sv
+    Info (12023): Found entity 1: binaryCounter16Bit File: C:/Users/serva/OneDrive/Documents/Classes_Spring_2024/ADL/LAB2/Lab2/binaryCounter16Bit.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file dividexn.sv
+    Info (12023): Found entity 1: divideXN File: C:/Users/serva/OneDrive/Documents/Classes_Spring_2024/ADL/LAB2/Lab2/divideXN.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file fsm.sv
+    Info (12023): Found entity 1: FSM File: C:/Users/serva/OneDrive/Documents/Classes_Spring_2024/ADL/LAB2/Lab2/FSM.sv Line: 4
+Info (12021): Found 1 design units, including 1 entities, in source file clockladder.sv
+    Info (12023): Found entity 1: clockLadder File: C:/Users/serva/OneDrive/Documents/Classes_Spring_2024/ADL/LAB2/Lab2/clockLadder.sv Line: 4
+Info (12021): Found 1 design units, including 1 entities, in source file four2one.sv
+    Info (12023): Found entity 1: four2one File: C:/Users/serva/OneDrive/Documents/Classes_Spring_2024/ADL/LAB2/Lab2/four2one.sv Line: 4
+Info (12021): Found 1 design units, including 1 entities, in source file speeds.sv
+    Info (12023): Found entity 1: speeds File: C:/Users/serva/OneDrive/Documents/Classes_Spring_2024/ADL/LAB2/Lab2/speeds.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file output_files/onofftoggle.sv
+    Info (12023): Found entity 1: OnOffToggle File: C:/Users/serva/OneDrive/Documents/Classes_Spring_2024/ADL/LAB2/Lab2/output_files/OnOffToggle.sv Line: 1
+Warning (12090): Entity "MUX" obtained from "MUX.sv" instead of from Quartus Prime megafunction library File: C:/Users/serva/OneDrive/Documents/Classes_Spring_2024/ADL/LAB2/Lab2/MUX.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file mux.sv
+    Info (12023): Found entity 1: MUX File: C:/Users/serva/OneDrive/Documents/Classes_Spring_2024/ADL/LAB2/Lab2/MUX.sv Line: 1
+Info (12127): Elaborating entity "Lab2" for the top level hierarchy
+Info (12128): Elaborating entity "OnOffToggle" for hierarchy "OnOffToggle:toggle" File: C:/Users/serva/OneDrive/Documents/Classes_Spring_2024/ADL/LAB2/Lab2/Lab2.sv Line: 17
+Info (12128): Elaborating entity "clockLadder" for hierarchy "clockLadder:Ladder" File: C:/Users/serva/OneDrive/Documents/Classes_Spring_2024/ADL/LAB2/Lab2/Lab2.sv Line: 30
+Info (12128): Elaborating entity "divideXN" for hierarchy "clockLadder:Ladder|divideXN:clock190" File: C:/Users/serva/OneDrive/Documents/Classes_Spring_2024/ADL/LAB2/Lab2/clockLadder.sv Line: 15
+Info (12128): Elaborating entity "divideXN" for hierarchy "clockLadder:Ladder|divideXN:clock25" File: C:/Users/serva/OneDrive/Documents/Classes_Spring_2024/ADL/LAB2/Lab2/clockLadder.sv Line: 22
+Info (12128): Elaborating entity "divideXN" for hierarchy "clockLadder:Ladder|divideXN:clock3" File: C:/Users/serva/OneDrive/Documents/Classes_Spring_2024/ADL/LAB2/Lab2/clockLadder.sv Line: 29
+Info (12128): Elaborating entity "divideXN" for hierarchy "clockLadder:Ladder|divideXN:clock1" File: C:/Users/serva/OneDrive/Documents/Classes_Spring_2024/ADL/LAB2/Lab2/clockLadder.sv Line: 36
+Info (12128): Elaborating entity "divideXN" for hierarchy "clockLadder:Ladder|divideXN:slowest" File: C:/Users/serva/OneDrive/Documents/Classes_Spring_2024/ADL/LAB2/Lab2/clockLadder.sv Line: 43
+Info (12128): Elaborating entity "speeds" for hierarchy "speeds:diffFreq" File: C:/Users/serva/OneDrive/Documents/Classes_Spring_2024/ADL/LAB2/Lab2/Lab2.sv Line: 45
+Info (10264): Verilog HDL Case Statement information at speeds.sv(14): all case item expressions in this case statement are onehot File: C:/Users/serva/OneDrive/Documents/Classes_Spring_2024/ADL/LAB2/Lab2/speeds.sv Line: 14
+Info (12128): Elaborating entity "binaryCounter16Bit" for hierarchy "binaryCounter16Bit:Count" File: C:/Users/serva/OneDrive/Documents/Classes_Spring_2024/ADL/LAB2/Lab2/Lab2.sv Line: 53
+Info (12128): Elaborating entity "MUX" for hierarchy "MUX:Mux_decoder" File: C:/Users/serva/OneDrive/Documents/Classes_Spring_2024/ADL/LAB2/Lab2/Lab2.sv Line: 66
+Info (12128): Elaborating entity "four2one" for hierarchy "MUX:Mux_decoder|four2one:decoder" File: C:/Users/serva/OneDrive/Documents/Classes_Spring_2024/ADL/LAB2/Lab2/MUX.sv Line: 21
+Info (12128): Elaborating entity "FSM" for hierarchy "MUX:Mux_decoder|FSM:digit" File: C:/Users/serva/OneDrive/Documents/Classes_Spring_2024/ADL/LAB2/Lab2/MUX.sv Line: 29
+Info (12128): Elaborating entity "binary2seven" for hierarchy "MUX:Mux_decoder|binary2seven:Hex" File: C:/Users/serva/OneDrive/Documents/Classes_Spring_2024/ADL/LAB2/Lab2/MUX.sv Line: 37
+Warning (19016): Clock multiplexers are found and protected
+    Warning (19017): Found clock multiplexer speeds:diffFreq|Mux0 File: C:/Users/serva/OneDrive/Documents/Classes_Spring_2024/ADL/LAB2/Lab2/speeds.sv Line: 14
+Warning (12241): 7 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Info (286030): Timing-Driven Synthesis is running
+Info (144001): Generated suppressed messages file C:/Users/serva/OneDrive/Documents/Classes_Spring_2024/ADL/LAB2/Lab2/output_files/Lab2.map.smsg
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 444 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 7 input pins
+    Info (21059): Implemented 11 output pins
+    Info (21061): Implemented 426 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 5 warnings
+    Info: Peak virtual memory: 4839 megabytes
+    Info: Processing ended: Tue Feb 13 18:44:20 2024
+    Info: Elapsed time: 00:00:11
+    Info: Total CPU time (on all processors): 00:00:16
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in C:/Users/serva/OneDrive/Documents/Classes_Spring_2024/ADL/LAB2/Lab2/output_files/Lab2.map.smsg.
+
+
